@@ -1,0 +1,919 @@
+- タイプ: OLL #01
+  ナンバー: "01"
+  愛称: サイコロ1
+  手順: |
+    \displaystyle \frac {RU-R2-FRF'-U2}{\text{\#18前半と同じ}} -R'FR'F'
+  手順略称: 
+  画像: 01.jpg
+- タイプ: OLL #02
+  ナンバー: "02"
+  愛称: うめぼし
+  手順: |
+    \begin{array}{ll}
+    & \displaystyle  \frac{F-RURU'-F'}{ \text{\#45:6手T} } \\
+    \text{}-& \displaystyle \frac{Fw-RURU'-Fw'}{ \text{Fwで6手Tと同じ} }
+    \end{array} 
+  手順略称: "くずし同手順 + U2"
+  画像: 02.jpg
+- タイプ: OLL #03
+  ナンバー: "03"
+  愛称: 句読点、
+  手順: |
+    \begin{array}{l}
+    \displaystyle \frac{Fw-RUR'U'-F'w}{\#44右指差し} -U'- \displaystyle \frac{F-RURU'-F'}{ \text{6手T} } 
+    \end{array} 
+  手順略称: "くずし#4カンマ + U2"
+  画像: 03.jpg
+- タイプ: OLL #04
+  ナンバー: "04"
+  愛称: カンマ
+  手順: |
+    \begin{array}{l}
+    Fw-RUR'U'-Fw'-U \\
+    \displaystyle \frac{-F-RUR'U'-F}{\text{6手T}} 
+    \end{array} 
+  手順略称: "くずし#3句読点、 + U2"
+  画像: 04.jpg
+- タイプ: OLL #05
+  ナンバー: "05"
+  愛称: 右下四角(横1)
+  手順: |
+    \begin{array}{l}
+    R'wU2-RUR'-URw
+    \end{array} 
+  手順略称: "くずし#8左手"
+  画像: 05.jpg
+- タイプ: OLL #06
+  ナンバー: "06"
+  愛称: 右上四角(横1)
+  手順: |
+    \begin{array}{l}
+    RwU2-R'U'R-U'R'w
+    \end{array} 
+  手順略称: "くずし#7逆さ右手"
+  画像: 06.jpg
+- タイプ: OLL #07
+  ナンバー: "07"
+  愛称: 逆さ右手
+  手順: |
+    \begin{array}{l}
+    RwU-R'UR-U2R'w
+    \end{array} 
+  手順略称: "くずし#6右上四角(横1)"
+  画像: 07.jpg
+- タイプ: OLL #08
+  ナンバー: "08"
+  愛称: 左手
+  手順: |
+    \begin{array}{l}
+    R'wU'-RU'R'-U2Rw
+    \end{array} 
+  手順略称: "くずし#右下四角(横1)"
+  画像: 08.jpg
+- タイプ: OLL #09-1
+  ナンバー: "09-1"
+  愛称: ２揃い羽
+  手順: |
+    \begin{array}{l}
+    \displaystyle \frac{RUR'U'-RF}{\text{\#33完全T}}\displaystyle \frac{R2-UR'U'-F}{\text{\#45：6手T}} 
+    \end{array} 
+  手順略称: 
+  画像: 09-1.jpg
+- タイプ: OLL #09-2
+  ナンバー: "09-2"
+  愛称: ２揃い羽右上
+  手順: |
+    \begin{array}{l}
+    \displaystyle \frac{M}{ \text{左手人差し指} } - \displaystyle \frac{RU2R'-U'RU'R'}{ \text{\#26anti-sune} } -U'M' \\
+    \text{くずし\#13右向きピストル:} \hspace{1em} F-URU'R'2-F'R-URU'R' 
+    \end{array} 
+  手順略称: 
+  画像: 09-2.jpg
+- タイプ: OLL #10-1
+  ナンバー: "10-1"
+  愛称: 右鳥(上向き)
+  手順: |
+    \begin{array}{l}
+    RUR'U-R'FRF'-RU2R'
+    \end{array} 
+  手順略称: 
+  画像: 10-1.jpg
+- タイプ: OLL #10-2
+  ナンバー: "10-2"
+  愛称: 右鳥(下向き)
+  手順: |
+    \begin{array}{l}
+    M'-R'U'2R-UR'UR-UM
+    \end{array} 
+  手順略称: "くずし#14左向きピストル"
+  画像: 10-2.jpg
+- タイプ: OLL #11
+  ナンバー: "11"
+  愛称: 下s
+  手順: |
+    \begin{array}{l}
+    M- \displaystyle \frac{RUR'U-RU2R'}{ \text{\#27 right sune} } -U'M'
+    \end{array} 
+  手順略称: "くずし U-#22十字(変則)"
+  画像: 11.jpg
+- タイプ: OLL #12
+  ナンバー: "12"
+  愛称: Z上
+  手順: |
+    \begin{array}{l}
+    M'- \displaystyle \frac{R'U'2R-UR'UR}{ \text{\#26を奥向きに} } -U'M
+    \end{array} 
+  手順略称: ""
+  画像: 12.jpg
+- タイプ: OLL #13
+  ナンバー: "13"
+  愛称: ピストル右向き
+  手順: |
+    \begin{array}{l}
+    F-URU'R'2-F'R-URU'R'
+    \end{array} 
+  手順略称: ""
+  画像: 13.jpg
+- タイプ: OLL #14
+  ナンバー: "14"
+  愛称: ピストル左向き
+  手順: |
+    \begin{array}{l}
+    R'FRU-R'F'RF-U'F'
+    \end{array} 
+  手順略称: "くずし同手順×2回"
+  画像: 14.jpg
+- タイプ: OLL #15
+  ナンバー: "15"
+  愛称: デカＪ(下)
+  手順: |
+    \begin{array}{l}
+    R'wU'Rw-R'U'RU-R'wURw
+    \end{array} 
+  手順略称: "くずし同手順×5回"
+  画像: 15.jpg
+- タイプ: OLL #16-1
+  ナンバー: "16-1"
+  愛称: デカＬ(上)
+  手順: |
+    \begin{array}{l}
+    RwUR'w-RUR'U'-RwU'R'w
+    \end{array} 
+  手順略称: "くずし同手順×5回"
+  画像: 16-1.jpg
+- タイプ: OLL #16-2
+  ナンバー: "16-2"
+  愛称: デカＬ(下)
+  手順: |
+    \begin{array}{l}
+    LwUL'w-LUL'-U'-LwU'L'w
+    \end{array} 
+  手順略称: "くずし同手順×5回"
+  画像: 16-2.jpg
+- タイプ: OLL #17
+  ナンバー: "17"
+  愛称: サイコロ3
+  手順: |
+    \begin{array}{ll}
+    \displaystyle \frac{Fw-RUR'U'-F'w-}{ \text{\#44右指差し} } -U'- \displaystyle \frac{RUR'U'-R'FRF'}{ \text{\#33完全T} }  \hspace{1em} &(1つ目) \\
+    RUR'U-R'-FRF'-U2-R'-FRF' \hspace{1em} &(2つ目) \\
+    \end{array} 
+  手順略称: "くずし#19ミッキー"
+  画像: 17.jpg
+- タイプ: OLL #18-1
+  ナンバー: "18-1"
+  愛称: くの字
+  手順: |
+    \begin{array}{l}
+    \displaystyle \frac{RU2-R2-FRF'-U2}{\text{\#1前半と同じ}} - \displaystyle \frac{RwR'-URUR'w}{\text{\#57H後半と同じ}} 
+    \end{array} 
+  手順略称: "くずし同手順 + U2"
+  画像: 18-1.jpg
+- タイプ: OLL #18-2
+  ナンバー: "18-2"
+  愛称: アンダーバーv
+  手順: |
+    \begin{array}{l}
+    \displaystyle \frac{RwU-R'UR-U2(R'w)R'w2}{\text{\#7逆さ右手}} - \displaystyle \frac{(R'w)-U'-RU'R'-U2Rw}{\text{\#8左手}} \\
+    ※前半と後半のR'wを合わせてR'w2にする
+    \end{array} 
+  手順略称: ""
+  画像: 18-2.jpg
+- タイプ: OLL #19-1
+  ナンバー: "19-1"
+  愛称: ミッキーマウス
+  手順: |
+    \begin{array}{l}
+    R'wR-U-RUR'U'-RwR'2-FRF'
+    \end{array} 
+  手順略称: "くずし#1くの字字"
+  画像: 19-1.jpg
+- タイプ: OLL #19-2
+  ナンバー: "19-2"
+  愛称: ミッキーマウス(逆さ)
+  手順: |
+    \begin{array}{l}
+    \displaystyle \frac{RwU2-R'UR'-U'(R'w)R'w2}{ \text{\#6左上四角} }- \displaystyle \frac{(R'w)-U2-RUR'-URw}{ \text{\#5右下四角} }
+    \end{array} 
+  手順略称: "くずし#1くの字"
+  画像: 19-2.jpg
+- タイプ: OLL #20
+  ナンバー: "20"
+  愛称: サイコロ5
+  手順: |
+    \begin{array}{l}
+    MU- \displaystyle \frac{RUR'U'-M \underline{2}-URU'R'w}{ \text{\#57とほぼ同じ} } 
+    \end{array} 
+  手順略称: "くずし同手順"
+  画像: 20.jpg
+- タイプ: OLL #21-1
+  ナンバー: "21-1"
+  愛称: 十字完全(上下)
+  手順: |
+    \begin{array}{l}
+    RU2-R'U'RU-R'U'RU'-R
+    \end{array} 
+  手順略称: "#21-2完全十字(左右)、またはくずし同手順 + U"
+  画像: 21-1.jpg
+- タイプ: OLL #21-2
+  ナンバー: "21-2"
+  愛称: 十字完全(左右)
+  手順: |
+    \begin{array}{l}
+    RU-R'URU'-R'URU'2-R'
+    \end{array} 
+  手順略称: "#21-1完全十字(上下)、またはくずし同手順 + U"
+  画像: 21-2.jpg
+- タイプ: OLL #22
+  ナンバー: "22"
+  愛称: 十字(右上下)
+  手順: |
+    \begin{array}{l}
+    RU2-R'2U'-R2U'-R'2U'2-R
+    \end{array} 
+  手順略称: "くずし同手順"
+  画像: 22.jpg
+- タイプ: OLL #23-1
+  ナンバー: "23-1"
+  愛称: ヘッドライト(下向き)
+  手順: |
+    \begin{array}{l}
+    R2D-R'U2R-D'-R'U2R'
+    \end{array} 
+  手順略称: "くずし同手順×2回"
+  画像: 23-1.jpg
+- タイプ: OLL #23-2
+  ナンバー: "23-2"
+  愛称: ヘッドライト(下向き)
+  手順: |
+    \begin{array}{l}
+    R'2D'-RU2R'-D-RU2R
+    \end{array} 
+  手順略称: "くずし同手順×2回"
+  画像: 23-2.jpg
+- タイプ: OLL #24-1
+  ナンバー: "24-1"
+  愛称: 横目(左向き)
+  手順: |
+    \begin{array}{l}
+    RwUR'U'-R'wFRF'
+    \end{array} 
+  手順略称: "くずし#25-2:8の字 + U"
+  画像: 24-1.jpg
+- タイプ: OLL #24-2
+  ナンバー: "24-2"
+  愛称: 横目(下向き)
+  手順: |
+    \begin{array}{l}
+    (x)-RUR'D-RU'R'D'
+    \end{array} 
+  手順略称: "(X)=上面手前、くずし#25-2:8の字"
+  画像: 24-2.jpg
+- タイプ: OLL #25-1
+  ナンバー: "25-1"
+  愛称: 8の字(左上)
+  手順: |
+    \begin{array}{l}
+    RU-R'URU'-R'URU'2-R'
+    \end{array} 
+  手順略称: ""
+  画像: 25-1.jpg
+- タイプ: OLL #25-2
+  ナンバー: "25-2"
+  愛称: 8の字(右上)
+  手順: |
+    \begin{array}{l}
+    (x)- \displaystyle \frac{RU'R'D-RUR'D'}{ 左左-右右 } 
+    \end{array} 
+  手順略称: "(x)=上面手前"
+  画像: 25-2.jpg
+- タイプ: OLL #26-1
+  ナンバー: "26-1"
+  愛称: sune(右上)
+  手順: |
+    \begin{array}{l}
+    RU2R'-U'RU'R'
+    \end{array} 
+  手順略称: "くずし#27 right sune"
+  画像: 26-1.jpg
+- タイプ: OLL #26-2
+  ナンバー: "26-2"
+  愛称: sune(左上)
+  手順: |
+    \begin{array}{l}
+    R'U'RU'-R'U2R
+    \end{array} 
+  手順略称: "くずし#27 right sune + U"
+  画像: 26-2.jpg
+- タイプ: OLL #27
+  ナンバー: "27"
+  愛称: sune right(左下)
+  手順: |
+    \begin{array}{l}
+    RUR'U-RU2R'
+    \end{array} 
+  手順略称: "くずし#26 sune"
+  画像: 27.jpg
+- タイプ: OLL #28
+  ナンバー: "28"
+  愛称: ステルス飛行機
+  手順: |
+    \begin{array}{ll}
+    RwUR'U'- \displaystyle \frac{Rw'R}{M} -URU'R' \\
+    \text{くずし\#57H} \hspace{1cm} RUR'U'- \displaystyle \frac{R'Rw}{M'} -URU'Rw'
+    \end{array} 
+  手順略称: 
+  画像: 28.jpg
+- タイプ: OLL #29
+  ナンバー: "29"
+  愛称: バイク(右向き)
+  手順: |
+    \begin{array}{l}
+    R'-FRF'-RU2R'U'-F'U'F
+    \end{array} 
+  手順略称: 
+  画像: 29.jpg
+- タイプ: OLL #30
+  ナンバー: "30"
+  愛称: バイク(逆さ左向き)
+  手順: |
+    \begin{array}{l}
+    FwRU-R2U'-R'U-R2U'-R'F'w
+    \end{array} 
+  手順略称: 
+  画像: 30.jpg
+- タイプ: OLL #31
+  ナンバー: "31"
+  愛称: 旗
+  手順: |
+    \begin{array}{l}
+    \displaystyle \frac{R'U'F-URU'-R'F'R}{ 出分出-分入合-出入入 } 
+    \end{array} 
+  手順略称: "くずし#40右向き空気イス"
+  画像: 31.jpg
+- タイプ: OLL #32
+  ナンバー: "32"
+  愛称: アンテナ
+  手順: |
+    \begin{array}{l}
+    RUB'U'-R'UR-BR'
+    \end{array} 
+  手順略称: "くずし#36W"
+  画像: 32.jpg
+- タイプ: OLL #33
+  ナンバー: "33"
+  愛称: 完全T
+  手順: |
+    \begin{array}{l}
+    RUR'U'-R'FRR'
+    \end{array} 
+  手順略称: "くずし#37四角□▫"
+  画像: 33.jpg
+- タイプ: OLL #34-1
+  ナンバー: "34-1"
+  愛称: アーチ∩
+  手順: |
+    \begin{array}{l}
+    RU-R'2U'-R'FR-URU'-F'
+    \end{array} 
+  手順略称: "くずし同手順×2回 or #33完全T→同手順"
+  画像: 34-1.jpg
+- タイプ: OLL #34-2
+  ナンバー: "34-2"
+  愛称: アーチU
+  手順: |
+    \begin{array}{l}
+    \displaystyle \frac{ F-RUR'U'- \underline{R'} F'}{\text{\#45:6手Tに似ている}}- \displaystyle \frac{ Rw-URU'-R'w}{\text{\#57Hの後半と同じ}} \\
+    \end{array} 
+  手順略称: ""
+  画像: 34-2.jpg
+- タイプ: OLL #35
+  ナンバー: "35"
+  愛称: 魚(右下)
+  手順: |
+    \begin{array}{l}
+    RU2-R2-FRF'-RU2R'
+    \end{array} 
+  手順略称: ""
+  画像: 35.jpg
+- タイプ: OLL #36
+  ナンバー: "36"
+  愛称: W(右上)
+  手順: |
+    \begin{array}{l}
+    R'U'RU'-R'URU-LwU'-R'U
+    \end{array} 
+  手順略称: "くずし#25-2:8の字 + U2 + 同手順"
+  画像: 36.jpg
+- タイプ: OLL #37
+  ナンバー: "37"
+  愛称: 四角□▫
+  手順: |
+    \begin{array}{l}
+    F-RU'R'U'-RUR'-F'
+    \end{array} 
+  手順略称: "くずし#33完全T"
+  画像: 37.jpg
+- タイプ: OLL #38
+  ナンバー: "38"
+  愛称: M
+  手順: |
+    \begin{array}{l}
+    RUR'U-RU'R'U'-R'FRF'
+    \end{array} 
+  手順略称: "くずし#25:8の字-(U')-同手順"
+  画像: 38.jpg
+- タイプ: OLL #39-1
+  ナンバー: "39-1"
+  愛称: 空気イス(左向き)
+  手順: |
+    \begin{array}{l}
+    \displaystyle \frac{F-RUR'U'-F'}{ \text{6手T} }  \displaystyle \frac{R'U'RU'-R'U2-R}{ \text{\#26 sune} } 
+    \end{array} 
+  手順略称: "くずし#32アンテナ + U2"
+  画像: 39-1.jpg
+- タイプ: OLL #39-2
+  ナンバー: "39-2"
+  愛称: 空気イス(左向き逆さ)
+  手順: |
+    \begin{array}{l}
+    LwU'-L'wU'-LwFU-F'R'
+    \end{array} 
+  手順略称: "左手メイン、くずし#32アンテナ"
+  画像: 39-2.jpg
+- タイプ: OLL #40
+  ナンバー: "40"
+  愛称: 空気イス(右向き)
+  手順: |
+    \begin{array}{l}
+    \displaystyle \frac{R'FR-UR'U'-F'UR}{ 出出入-分出合-入合入 } 
+    \end{array} 
+  手順略称: "くずし#31旗"
+  画像: 40.jpg
+- タイプ: OLL #41
+  ナンバー: "41"
+  愛称: 人
+  手順: |
+    \begin{array}{l}
+    \displaystyle \frac{RUR'U'-RU2R'}{ \text{\#27 right sune} }-  \displaystyle \frac{F-RUR'U'-F'}{ \text{6手T} } 
+    \end{array} 
+  手順略称: "くずし#"
+  画像: 41.jpg
+- タイプ: OLL #42
+  ナンバー: "42"
+  愛称: アンダーバーy
+  手順: |
+    \begin{array}{l}
+    \displaystyle \frac{R'U'RU'-R'U2R}{\text{\#26-2sune}} - \displaystyle \frac{F-RUR'U'-F'}{\text{6手T}} 
+    \end{array} 
+  手順略称: "くずし#13右向きピストル-(y')-6手T"
+  画像: 42.jpg
+- タイプ: OLL #43-1
+  ナンバー: "43-1"
+  愛称: 指差し(左手上)
+  手順: |
+    \begin{array}{l}
+    F'w-L'U'LU-Fw
+    \end{array} 
+  手順略称: ""
+  画像: 43-1.jpg
+- タイプ: OLL #43-2
+  ナンバー: "43-2"
+  愛称: 指差し(左手下)
+  手順: |
+    \begin{array}{l}
+    F'w-L'U'LU-Fw
+    \end{array} 
+  手順略称: "くずし#46コ"
+  画像: 43-2.jpg
+- タイプ: OLL #44-1
+  ナンバー: "44-1"
+  愛称: 指差し(右手上)
+  手順: |
+    \begin{array}{l}
+    Fw-RUR'U'-F'w
+    \end{array} 
+  手順略称: "#45:6手T + U2"
+  画像: 44-1.jpg
+- タイプ: OLL #44-2
+  ナンバー: "44-2"
+  愛称: 指差し(右手下)
+  手順: |
+    \begin{array}{l}
+    F-URU'R'-F'
+    \end{array} 
+  手順略称: "#45:6手T"
+  画像: 44-2.jpg
+- タイプ: OLL #45-1
+  ナンバー: "45-1"
+  愛称: 6手T
+  手順: |
+    \begin{array}{l}
+    F-RUR'U'-F'
+    \end{array} 
+  手順略称: "くずし#44-2"
+  画像: 45-1.jpg
+- タイプ: OLL #45-2
+  ナンバー: "45-2"
+  愛称: 6手T(右向き)
+  手順: |
+    \begin{array}{l}
+    Fw-URU'R'-F'w
+    \end{array} 
+  手順略称: "くずし#44-2 + U2"
+  画像: 45-2.jpg
+- タイプ: OLL #46
+  ナンバー: "46"
+  愛称: コ
+  手順: |
+    \begin{array}{l}
+    R'U'R'-FRF'-UR \\
+    \text{くずし\#47}
+    \end{array} 
+  手順略称: "くずし#47L(1-2)"
+  画像: 46.jpg
+- タイプ: OLL #47
+  ナンバー: "47"
+  愛称: L(1-2)
+  手順: |
+    \begin{array}{l}
+    R'U'-(x)-R'URU'-R'URU'-(x')-UR \\
+    \end{array} 
+  手順略称: "(x)=上面手前"
+  画像: 47.jpg
+- タイプ: OLL #48
+  ナンバー: "48"
+  愛称: 閉じカッコ」(2-1)
+  手順: |
+    \begin{array}{l}
+    F-RUR'U'-RUR'U'-F'
+    \end{array} 
+  手順略称: "くずしF-URU'R'-URU'R'-F'"
+  画像: 48.jpg
+- タイプ: OLL #49
+  ナンバー: "49"
+  愛称: 0-3ﾍ
+  手順: |
+    \begin{array}{ll}
+    LwU'-L'w2U-Lw2U-L'w2U'-Lw \hspace{1em}&(1つ目 合ってる？要確認) \\
+    RB'-R'2F-R2B-R'2F'-R \hspace{1em}&(2つ目) \\
+    \end{array} 
+  手順略称: "くずし#50:3-0r"
+  画像: 49.jpg
+- タイプ: OLL #50
+  ナンバー: "50"
+  愛称: 3-0r
+  手順: |
+    \begin{array}{l}
+    R'wU-Rw2U'-R'w2U'-Rw2U-R'w
+    \end{array} 
+  手順略称: "くずし#49:0-3ヘ"
+  画像: 50.jpg
+- タイプ: OLL #51-1
+  ナンバー: "51-1"
+  愛称: 棒(2-0横)
+  手順: |
+    \begin{array}{l}
+    Fw-RUR'U'-RUR'U'-F'w
+    \end{array} 
+  手順略称: "くずしF-RUR'U'-RUR'U'-F'-U2"
+  画像: 51-1.jpg
+- タイプ: OLL #51-2
+  ナンバー: "51-2"
+  愛称: 棒(0-2横)
+  手順: |
+    \begin{array}{l}
+    F-URU'R'-URU'R'-F'
+    \end{array} 
+  手順略称: "くずしF-RUR'U'-RUR'U'-F'"
+  画像: 51-2.jpg
+- タイプ: OLL #52-1
+  ナンバー: "52-1"
+  愛称: 棒(3-1)
+  手順: |
+    \begin{array}{l}
+    R'F'-U'-FU'-RUR'-UR'
+    \end{array} 
+  手順略称: "くずし同手順 + U2"
+  画像: 52-1.jpg
+- タイプ: OLL #52-2
+  ナンバー: "52-2"
+  愛称: 棒(1-3)
+  手順: |
+    \begin{array}{l}
+    R'U'RU'-R'U-(y')-R'ULwU
+    \end{array} 
+  手順略称: "(y')=左手前、くずし同手順"
+  画像: 52-2.jpg
+- タイプ: OLL #53
+  ナンバー: "53"
+  愛称: 3-2r
+  手順: |
+    \begin{array}{l}
+    R'wU'-RU'R'U-RU'R'-U2Tw
+    \end{array} 
+  手順略称: "くずし同手順-U"
+  画像: 53.jpg
+- タイプ: OLL #54
+  ナンバー: "54"
+  愛称: 3-2L
+  手順: |
+    \begin{array}{l}
+    RwU-R'URU'-R'UR-R2R'w
+    \end{array} 
+  手順略称: "くずし同手順-U"
+  画像: 54.jpg
+- タイプ: OLL #55-1
+  ナンバー: "55-1"
+  愛称: 棒(3-3横)
+  手順: |
+    \begin{array}{l}
+    RwU2R'U'-R2R'wU-R'U'-RwU'R'w
+    \end{array} 
+  手順略称: "くずし"
+  画像: 55-1.jpg
+- タイプ: OLL #55-2
+  ナンバー: "55-2"
+  愛称: 棒(3-3縦)
+  手順: |
+    \begin{array}{l}
+    RwU2-R2-FRF'-U2-R'wFRF'
+    \end{array} 
+  手順略称: "くずし"
+  画像: 55-2.jpg
+- タイプ: OLL #56
+  ナンバー: "56"
+  愛称: 棒(1-1横)
+  手順: |
+    \begin{array}{l}
+    R'wU'RwU'-R'UR-U'R'UR-R'wURw
+    \end{array} 
+  手順略称: "くずし#55-1棒(3-3横)"
+  画像: 56.jpg
+- タイプ: OLL #57
+  ナンバー: "57"
+  愛称: H
+  手順: |
+    \begin{array}{l}
+    RUR'U'-M'-URU'R'w
+    \end{array} 
+  手順略称: "くずし#28ステルス戦闘機"
+  画像: 57.jpg
+
+
+- タイプ: PLL #n1-1
+  ナンバー: "n1-1"
+  愛称: U-perm(反時計回り下)
+  手順: |
+    \begin{array}{ll}
+    RU'RU-RURU'-R'U'R2 \hspace{1em} (1つ目) \\
+    F2U'-M'-U2-M-U'F2 \hspace{1em} (2つ目) \\
+    \end{array} 
+  手順略称: "くずしn2(時計回り)"
+  画像: n1-1.jpg
+- タイプ: PLL #n1-2
+  ナンバー: "n1-2"
+  愛称: U-perm(反時計回り上)
+  手順: |
+    \begin{array}{l}
+    R2U'-R'U'-RURU-RU'R
+    \end{array} 
+  手順略称: "くずしn2(時計回り)"
+  画像: n1-2.jpg
+- タイプ: PLL #n2-1
+  ナンバー: "n2-1"
+  愛称: U-perm(時計回り下)
+  手順: |
+    \begin{array}{ll}
+    R2U-RU-R'U'R'U'-R'UR' \hspace{1em} &(1つ目) \\
+    F2U-M'-U2-M-UF2 \hspace{1em} &(いまいち) \\
+    \end{array} 
+  手順略称: "くずしn1(反時計回り)"
+  画像: n2-1.jpg
+- タイプ: PLL #n2-2
+  ナンバー: "n2-2"
+  愛称: U-perm(時計回り上)
+  手順: |
+    \begin{array}{l}
+    R'UR'U'-R'UR'U-RUR2(要検証)
+    \end{array} 
+  手順略称: "くずしn1(反時計回り)"
+  画像: n2-2.jpg
+- タイプ: PLL #n3-1
+  ナンバー: "n3-1"
+  愛称: A-perm B(反時計回り上)
+  手順: |
+    \begin{array}{l}
+    (x')-R2'D2-RUR'-D2-RU'R
+    \end{array} 
+  手順略称: "(x')=白手前、くずしn4(時計回り)"
+  画像: n3-1.jpg
+- タイプ: PLL #n3-2
+  ナンバー: "n3-2"
+  愛称: A-perm B(反時計回り下)
+  手順: |
+    \begin{array}{l}
+    (x)-RU'R-D2-R'UR-D2-R'2
+    \end{array} 
+  手順略称: "(x)=天面手前、くずしn4(時計回り)"
+  画像: n3-2.jpg
+- タイプ: PLL #n4-1
+  ナンバー: "n4-1"
+  愛称: A-perm A(時計回り下)
+  手順: |
+    \begin{array}{l}
+    (x')-R'UR'-D2-RU'R'-D2-R2
+    \end{array} 
+  手順略称: "(x')=白手前、くずしn3(反時計回り)"
+  画像: n4-1.jpg
+- タイプ: PLL #n4-2
+  ナンバー: "n4-2"
+  愛称: A-perm A(時計回り上)
+  手順: |
+    \begin{array}{l}
+    (x)-R2D2-R'U'R-D2-R'U'R
+    \end{array} 
+  手順略称: "(x)=上面手前、くずしn3(反時計回り)"
+  画像: n4-2.jpg
+- タイプ: PLL #n5
+  ナンバー: "n5"
+  愛称: Z-perm(右上)
+  手順: |
+    \begin{array}{ll}
+    U-R'U'RU'-RURU'-R'URU-R2U'R'-U \hspace{1em} &(1つ目) \\
+    M2UM2U-MU2-M2U2-MU2 \hspace{1em} &(2つ目) \\
+    (M=R'w2R2)
+    \end{array} 
+  手順略称: "くずし同手順"
+  画像: n5.jpg
+- タイプ: PLL #n6
+  ナンバー: "n6"
+  愛称: H-perm(十字)
+  手順: |
+    \begin{array}{l}
+    M2U-M2U2-M2U-M2 \\
+    (M2=R'w2R2)
+    \end{array} 
+  手順略称: "くずし同手順"
+  画像: n6.jpg
+- タイプ: PLL #n7
+  ナンバー: "n7"
+  愛称: E-perm(4角平行)
+  手順: |
+    \begin{array}{l}
+    (x')-\displaystyle \frac{RU'R'D-RUR'D'}{ \text{左左右右} }-  \displaystyle \frac{RUR'D-RU'R'D' }{ \text{右左左右} } 
+    \end{array} 
+  手順略称: "(x')=上手前、くずし同手順"
+  画像: n7.jpg
+- タイプ: PLL #n8
+  ナンバー: "n8"
+  愛称: T-perm
+  手順: |
+    \begin{array}{l}
+    \displaystyle \frac{RUR'U'-R'F(RF')R2}{ \text{\#33:完全T} } - \displaystyle \frac{(F-R)UR'U'-RUR'-F'}{\text{\#37大小□▫}}
+    \end{array} 
+  手順略称: "くずし同手順"
+  画像: n8.jpg
+- タイプ: PLL #n9
+  ナンバー: "n9"
+  愛称: V-perm(斜め平行)
+  手順: |
+    \begin{array}{ll}
+    R'UR'U'-(y)-R'F'R'2-U'R'UR'-FRF \hspace{1em} &(1つ目要検証) \\
+    R'UR'U'-(z')-B'RB'R-B2-(z)-R'B'R-BR \hspace{1em} &(2つ目) \\
+    \end{array} 
+  手順略称: "（ｙ)=右手前、(z')=右上、くずし同手順"
+  画像: n9.jpg
+- タイプ: PLL #n10
+  ナンバー: "n10"
+  愛称: F-perm(平行)
+  手順: |
+    \begin{array}{l}
+    R'UF'-RUR'U'-R'F-R2U'R'U'-RUR'-UR(要確認)
+    \end{array} 
+  手順略称: "くずし同手順"
+  画像: n10.jpg
+- タイプ: PLL #n11
+  ナンバー: "n11"
+  愛称: R-perm b
+  手順: |
+    \begin{array}{l}
+    R'U2R-U'2-R'FRUR'U'-R'F'R2-U'
+    \end{array} 
+  手順略称: "くずし同手順"
+  画像: n11.jpg
+- タイプ: PLL #n12
+  ナンバー: "n12"
+  愛称: R-perm a
+  手順: |
+    \begin{array}{l}
+    RU'R'U'-RURD-R'U'RD'-R'U2R'-U'
+    \end{array} 
+  手順略称: "くずし同手順"
+  画像: n12.jpg
+- タイプ: PLL #13
+  ナンバー: "n13"
+  愛称: J-perm b(正しくJ)
+  手順: |
+    \begin{array}{ll}
+    RUR' \displaystyle \frac{F'-RUR'U'-R'FR2-U'R'-U'}{\text{F-perm中間と同じ}}  \hspace{1cm} &(\text{基本}) \\
+    RU2R'U'-RU2-L'UR'-U'L &(間違ってそう要検証)
+    \end{array} 
+  手順略称: "くずし同手順"
+  画像: n13.jpg
+- タイプ: PLL #14
+  ナンバー: "n14"
+  愛称: J-perm a(反転J)
+  手順: |
+    \begin{array}{ll}
+    R'U'2-RUR'-U2-LU'R-UL' \hspace{1em} &(1つ目) \\
+    U'-R'UL'-U2-RU'R'-U2RL \hspace{1em} &(2つ目) \\
+    \end{array} 
+  手順略称: 
+  画像: n14.jpg
+- タイプ: PLL #15
+  ナンバー: "n15"
+  愛称: Y-perm(矛)
+  手順: |
+    \begin{array}{ll}
+    \displaystyle \frac{F-RU'R'U'-RUR'-F'}{\text{OLL\#37大小□▫}}-  \displaystyle \frac{RUR'U'-R'FRF'}{\text{OLL\#33完全T}} 
+    \end{array} 
+  手順略称: くずしも同手順
+  画像: n15.jpg
+- タイプ: PLL #n16
+  ナンバー: "n16"
+  愛称: G-perm D(時計回り)
+  手順: |
+    \begin{array}{ll}
+    RUR'-(y')-R'2U'w-RU'R'U-R'UwR2 \hspace{1em} &(1つ目) \\
+    D'-RUR'UD-R2U'-RU'R'U-R'UR2-U \hspace{1em} &(2つ目) \\
+    \end{array} 
+  手順略称: "くずしG-perm C"
+  画像: n16_simple.jpg
+- タイプ: PLL #n17
+  ナンバー: "n17"
+  愛称: G-perm C(反時計回り)
+  手順: |
+    \begin{array}{ll}
+    R2'U'w-RU'R-UR'-UwR2-FwR'Fw' \hspace{1cm} &(\text{1つ目}) \\
+    R2'U'-RU'R'U-R'U-R2-UD'-RU'R-D-U' \hspace{1cm} &(\text{2つ目}) \\
+    \end{array} 
+  手順略称: "くずしG-perm D"
+  画像: n17_simple.jpg
+- タイプ: PLL #n18
+  ナンバー: "n18"
+  愛称: G-perm A(時計回り)
+  手順: |
+    \begin{array}{ll}
+    R2Uw-R'UR'U'-RU'wR'2-(y')R'UR \hspace{1em} &(1つ目) \\
+    R2U-R'UR'U'-RU'R2-U'D-R'UR-D'U \hspace{1em} &(2つ目) \\
+    \end{array} 
+  手順略称: "(y')=左前、くずしG-perm b(反時計回り)"
+  画像: n18_simple.jpg
+- タイプ: PLL #n19
+  ナンバー: "n19"
+  愛称: G-perm B(反時計回り)
+  手順: |
+    \begin{array}{l}
+    F'U'F-R2UFw-R'URU'-RU'wR'2
+    \end{array} 
+  手順略称: "くずしG-perm a(時計回り)"
+  画像: n19_simple.jpg
+- タイプ: PLL #n20
+  ナンバー: "n20"
+  愛称: N-perm b
+  手順: |
+    \begin{array}{l}
+    R'URU'-R'F'U'F-RUR'F-R'F'-RU'R
+    \end{array} 
+  手順略称: 
+  画像: n20.jpg
+- タイプ: PLL #n21
+  ナンバー: "n21"
+  愛称: N-perm a
+  手順: |
+    \begin{array}{l}
+    RUR'U-RUR'-F'RUR'-U'R'F-R2U'R'-U2-RU'R'
+    \end{array} 
+  手順略称: "くずし同手順"
+  画像: n21.jpg
