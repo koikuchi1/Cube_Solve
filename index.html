@@ -9,6 +9,14 @@
       tex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']],
         displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: {
+        renderActions: {
+          addMenu: [],
+        }
+      },
+      chtml: {
+        scale: 1.3  // ここで拡大率を指定（デフォルトは1）
       }
     };
   </script>
@@ -176,7 +184,7 @@
       <p><strong>ナンバー:</strong> ${found['ナンバー']} <strong>愛称:</strong> ${found['愛称']}</p>
       <img src="${imgUrl}" alt="${found['愛称']}画像" />
       <p><strong>手順:</strong></p>
-      <p style="font-family: 'Courier New', monospace; font-size: 1.3em;">
+      <p style="font-family: 'Courier New', monospace;">
         $$${found['手順']}$$
       </p>
 
@@ -192,6 +200,7 @@
 
 </body>
 </html>
+
 
 
 
