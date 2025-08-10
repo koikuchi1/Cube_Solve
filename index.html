@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>Speed Cube Solve Search</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 700px; margin: 20px auto; }
+    label { font-weight: bold; margin-right: 5px; }
+    select, input[type="text"] { padding: 5px; margin-bottom: 10px; }
+    #suggestions { background: #f0f0f0; border: 1px solid #ccc; padding: 5px; margin-top: -8px; margin-bottom: 10px; font-size: 0.9em; }
+    img { max-width: 300px; width: 10%; margin-top: 10px; }
+    .result { border-top: 1px solid #ccc; padding-top: 15px; margin-top: 15px; }
+  </style>
+</head>
+<body>
+
+  <h2>Speed Cube Solve Search</h2>
+
+  <div>
+    <label for="typeSelect">タイプ:</label>
+    <select id="typeSelect">
+      <option value="OLL">OLL</option>
+      <option value="PLL">PLL</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="nicknameSelect">愛称（ドロップダウン）:</label>
+    <select id="nicknameSelect">
+      <option value="">-- 選択してください --</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="textInput">No./愛称（テキスト入力）:</label><br />
+    <input type="text" id="textInput" placeholder="ナンバーまたは愛称を入力" autocomplete="off" />
+    <div id="suggestions"></div>
+  </div>
+
+  <button id="searchBtn">検索</button>
+
+  <div id="output" class="result"></div>
+
+<script>
+  const jsonUrl = 'https://raw.githubusercontent.com/koikuchi1/Cube_Solve/main/cube_solve.json';
+
+  let data = [];
+  let currentType = 'OLL';
+
+  const typeSelect = document.getElementById('typeSelect');
+  const nicknameSelect = document.getElementById('nicknameSelect');
+  const textInput = document.getElementById('textInput');
+  const suggestionsDiv = document.getElementById('suggestions');
+  const searchBtn = document.getElementById('searchBtn');
+  const outputDiv = document.getElementById('output');
+
+  // JSONを読み込み
+  fetch(jsonUrl)
+    .then(response => response.json())
+    .then(json => {
+      data = json;
+      updateNicknameOptions(currentType);
+    })
+    .catch(err => {
+      outputDiv.innerHTML = `<p style="color:red;">データの読み込みに失敗しました: ${err}</p>`;
+    });
+
+  // タイプ変更時に愛称リスト更新
+  typeSelect.addEventListener('change', () => {
+    currentType = typeSelect.value;
+    updateNicknameOptions(currentType);
+    textInput.value = '';
+    suggestionsDiv.innerHTML = '';
+    outputDiv.innerHTML = '';
+  });
+
+  // 愛称ドロップダウン更新関数
+  function updateNicknameOptions(type) {
+    const nicknames = [...new Set(data.filter(d => d['タイプ'] === type).map(d => d['愛称']))].sort();
+    nicknameSelect.innerHTML = '<option value="">-- 選択してください --</option>';
+    nicknames.forEach(name => {
+      const option = document.createElement('option');
+      option.value = name;
+      option.textContent = name;
+      nicknameSelect.appendChild(option);
+    });
+  }
+
+  // テキスト入力で候補更新（前方一致最大10件）
+  textInput.addEventListener('input', () => {
+    const input = textInput.value.trim().toLowerCase();
+    if (input.length < 1) {
+      suggestionsDiv.innerHTML = '';
+      return;
+    }
+    const nicknames = [...new Set(data.filter(d => d['タイプ'] === currentType).map(d => d['愛称']))];
+    const matches = nicknames.filter(name => name.toLowerCase().startsWith(input)).slice(0, 10);
+    if (matches.length > 0) {
+      suggestionsDiv.innerHTML = `<small>候補: ${matches.join(', ')}</small>`;
+    } else {
+      suggestionsDiv.innerHTML = '';
+    }
+  });
+
+  // 検索ボタン押下時
+  searchBtn.addEventListener('click', () => {
+    outputDiv.innerHTML = '';
+
+    const typeVal = currentType.toLowerCase();
+    // 入力優先：テキスト欄、空ならドロップダウン
+    let idVal = textInput.value.trim().toLowerCase();
+    if (!idVal) {
+      idVal = nicknameSelect.value.trim().toLowerCase();
+    }
+
+    if (!typeVal || !idVal) {
+      outputDiv.textContent = 'タイプとナンバーまたは愛称を入力してください。';
+      return;
+    }
+
+    // 該当検索
+    const found = data.find(item => {
+      const typeMatch = item['タイプ'].toLowerCase() === typeVal;
+      const numMatch = item['ナンバー'].replace(/^0+/, '') === idVal.replace(/^0+/, '');
+      const nameMatch = item['愛称'].toLowerCase().startsWith(idVal);
+      return typeMatch && (numMatch || nameMatch);
+    });
+
+    if (!found) {
+      outputDiv.textContent = '該当するデータが見つかりませんでした。';
+      return;
+    }
+
+    // 表示
+    const imgUrl = `https://raw.githubusercontent.com/koikuchi1/Cube_Solve/main/images/${found['タイプ']}/${found['画像']}`;
+    outputDiv.innerHTML = `
+      <p><strong>ナンバー:</strong> ${found['ナンバー']} <strong>愛称:</strong> ${found['愛称']}</p>
+      <img src="${imgUrl}" alt="${found['愛称']}画像" />
+      <p><strong>手順:</strong></p>
+      <p style="font-family: 'Courier New', monospace; white-space: pre-wrap;">${found['手順']}</p>
+      <p><strong>手順略称:</strong> ${found['手順略称']}</p>
+    `;
+  });
+</script>
+
+</body>
+</html>
