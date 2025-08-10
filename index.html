@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <title>Speed Cube Solve Search</title>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script>
     window.MathJax = {
       tex: {
@@ -12,6 +11,7 @@
       }
     };
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     body { font-family: Arial, sans-serif; max-width: 700px; margin: 20px auto; }
     label { font-weight: bold; margin-right: 5px; }
@@ -152,11 +152,13 @@
 
       <p><strong>手順略称:</strong> ${found['手順略称']}</p>
     `;
+
+    // MathJaxで動的追加した数式を再レンダリング
+    if (window.MathJax) {
+      MathJax.typesetPromise();
+    }
   });
 </script>
 
 </body>
 </html>
-
-
-
