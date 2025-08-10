@@ -555,7 +555,7 @@
     "タイプ": "OLL",
     "ナンバー": "53",
     "愛称": "3-2r",
-    "手順": "\\begin{array}{l}\nR'wU'-RU'R'U-RU'R'-U2Tw\n\\end{array} \n",
+    "手順": "\\begin{array}{l}\nR'wU'-RU'R'U-RU'R'-U2Rw\n\\end{array} \n",
     "手順略称": "くずし同手順-U",
     "画像": "53.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
