@@ -754,7 +754,7 @@
   {
     "タイプ": "PLL",
     "ナンバー": "n16",
-    "愛称": "G-perm D(時計回り)",
+    "愛称": "G-perm D(時計回り右)",
     "手順": "\\begin{array}{ll}\nRUR'-(y')-R'2U'w-RU'R'U-R'UwR2 \\hspace{1em} &(1つ目) \\\\\nD'-RUR'UD-R2U'-RU'R'U-R'UR2-U \\hspace{1em} &(2つ目) \\\\\n\\end{array} \n",
     "手順略称": "くずしG-perm C",
     "画像": "n16_simple.jpg"
@@ -770,7 +770,7 @@
   {
     "タイプ": "PLL",
     "ナンバー": "n18",
-    "愛称": "G-perm A(時計回り)",
+    "愛称": "G-perm A(時計回り下)",
     "手順": "\\begin{array}{ll}\nR2Uw-R'UR'U'-RU'wR'2-(y')R'UR \\hspace{1em} &(1つ目) \\\\\nR2U-R'UR'U'-RU'R2-U'D-R'UR-D'U \\hspace{1em} &(2つ目) \\\\\n\\end{array} \n",
     "手順略称": "(y')=左前、くずしG-perm b(反時計回り)",
     "画像": "n18_simple.jpg"
@@ -801,3 +801,4 @@
   }
 
 ]
+
