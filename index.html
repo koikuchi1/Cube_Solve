@@ -138,7 +138,10 @@
       <p><strong>ナンバー:</strong> ${found['ナンバー']} <strong>愛称:</strong> ${found['愛称']}</p>
       <img src="${imgUrl}" alt="${found['愛称']}画像" />
       <p><strong>手順:</strong></p>
-      <p style="font-family: 'Courier New', monospace; white-space: pre-wrap;">${found['手順']}</p>
+      <p style="font-family: 'Courier New', monospace;">
+        $$${found['手順']}$$
+      </p>
+
       <p><strong>手順略称:</strong> ${found['手順略称']}</p>
     `;
   });
@@ -146,4 +149,5 @@
 
 </body>
 </html>
+
 
