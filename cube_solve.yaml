@@ -862,7 +862,7 @@
   画像: n15.jpg
 - タイプ: PLL #n16
   ナンバー: "n16"
-  愛称: G-perm D(時計回り)
+  愛称: G-perm D(時計回り右)
   手順: |
     \begin{array}{ll}
     RUR'-(y')-R'2U'w-RU'R'U-R'UwR2 \hspace{1em} &(1つ目) \\
@@ -882,7 +882,7 @@
   画像: n17_simple.jpg
 - タイプ: PLL #n18
   ナンバー: "n18"
-  愛称: G-perm A(時計回り)
+  愛称: G-perm A(時計回り下)
   手順: |
     \begin{array}{ll}
     R2Uw-R'UR'U'-RU'wR'2-(y')R'UR \hspace{1em} &(1つ目) \\
@@ -918,6 +918,7 @@
   手順略称: "くずし同手順"
 
   画像: n21.jpg
+
 
 
 
