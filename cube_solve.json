@@ -786,7 +786,7 @@
   {
     "タイプ": "PLL",
     "ナンバー": "n20",
-    "愛称": "N-perm b",
+    "愛称": "N-perm b(左斜め)",
     "手順": "\\begin{array}{l}\nR'URU'-R'F'U'F-RUR'F-R'F'-RU'R\n\\end{array} \n",
     "手順略称": null,
     "画像": "n20.jpg"
@@ -794,13 +794,14 @@
   {
     "タイプ": "PLL",
     "ナンバー": "n21",
-    "愛称": "N-perm a",
+    "愛称": "N-perm a(右斜め)",
     "手順": "\\begin{array}{l}\nRUR'U-RUR'-F'RUR'-U'R'F-R2U'R'-U2-RU'R'\n\\end{array} \n",
     "手順略称": "くずし同手順",
     "画像": "n21.jpg"
   }
 
 ]
+
 
 
 
