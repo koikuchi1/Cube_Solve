@@ -251,7 +251,7 @@
     "タイプ": "OLL",
     "ナンバー": "24-2",
     "愛称": "横目(下向き)",
-    "手順": "\\begin{array}{l}\n(x)-RUR'D-RU'R'D'\n\\end{array} \n",
+    "手順": "\\begin{array}{l}(x)- \\displaystyle \\frac{RUR'D-RU'R'D'}{右左-左右} \\end{array} ",
     "手順略称": "(X)=上面手前、くずし#25-2:8の字",
     "画像": "24-2.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
