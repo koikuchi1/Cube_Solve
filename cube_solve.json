@@ -299,7 +299,7 @@
     "タイプ": "OLL",
     "ナンバー": "28",
     "愛称": "ステルス飛行機",
-    "手順": "\\begin{array}{ll}\nRwUR'U'- \\displaystyle \\frac{Rw'R}{M} -URU'R' ",
+    "手順": "\\begin{array}{ll}\nRwUR'U'- \\displaystyle \\frac{Rw'R}{M} -URU'R'\\end{array} ",
     "手順略称": "くずし#57H",
     "画像": "28.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
