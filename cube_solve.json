@@ -67,7 +67,7 @@
     "タイプ": "OLL",
     "ナンバー": "09-1",
     "愛称": "２揃い羽",
-    "手順": "\\begin{array}{l}\n\\displaystyle \\frac{RUR'U'-RF(RF')}{\\text{\\#33完全T}}\\displaystyle \\frac{(FR)R2-UR'U'-F'}{\\text{\\#45：6手T}} \n\\end{array} \n",
+    "手順": "\\begin{array}{l}\n\\displaystyle \\frac{RUR'U'-R'F(RF')}{\\text{\\#33完全T}}\\displaystyle \\frac{(FR)R2-UR'U'-F'}{\\text{\\#45：6手T}} \n\\end{array} \n",
     "手順略称": null,
     "画像": "09-1.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
