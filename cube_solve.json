@@ -699,7 +699,7 @@
     "タイプ": "PLL",
     "ナンバー": "n9",
     "愛称": "V-perm(斜め平行)",
-    "手順": "\\begin{array}{ll}\nR'UR'U'-(y)-R'F'R'2-U'R'UR'-FRF \\hspace{1em} &(1つ目要検証) \\\\\nR'UR'U'-(z')-B'RB'R-B2-(z)-R'B'R-BR \\hspace{1em} &(2つ目) \\\\\n\\end{array} \n",
+    "手順": "\\begin{array}{ll}\nR'UR'U'-(y)-R'F'R'2-U'R'UR'-FRF \\hspace{1em} &(1つ目) \\\\\nR'UR'U'-(z')-B'RB'R-B2-(z)-R'B'R-BR \\hspace{1em} &(2つ目) \\\\\n\\end{array} \n",
     "手順略称": "（ｙ)=右手前、(z')=右上、くずし同手順",
     "画像": "n9.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
