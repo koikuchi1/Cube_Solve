@@ -187,7 +187,7 @@
     "タイプ": "OLL",
     "ナンバー": "19-2",
     "愛称": "ミッキーマウス(逆さ)",
-    "手順": "\\begin{array}{l}\n\\displaystyle \\frac{RwU2-R'UR'-U'(R'w)R'w2}{ \\text{\\#6左上四角} }- \\displaystyle \\frac{(R'w)-U2-RUR'-URw}{ \\text{\\#5右下四角} }\n\\end{array} \n",
+    "手順": "\\begin{array}{l}\n\\displaystyle \\frac{RwU2-R'UR'-U'(R'w)R'w2}{ \\text{\\#6左上四角} }- \\displaystyle \\frac{(R'w)-U2-RUR'-URw}{ \\text{\\#5右下四角} }(要検証)\n\\end{array} \n",
     "手順略称": "くずし#17サイコロ3",
     "画像": "19-2.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
