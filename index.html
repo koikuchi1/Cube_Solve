@@ -114,6 +114,12 @@
 
   // タイプ変更時に愛称リスト更新
   typeSelect.addEventListener('change', () => {
+    // 愛称ドロップダウン選択時にテキスト入力欄をクリア
+    nicknameSelect.addEventListener('change', () => {
+      textInput.value = '';
+      suggestionsDiv.innerHTML = '';
+    });
+
     currentType = typeSelect.value;
     updateNicknameOptions(currentType);
     textInput.value = '';
@@ -200,6 +206,7 @@
 
 </body>
 </html>
+
 
 
 
