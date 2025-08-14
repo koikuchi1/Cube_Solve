@@ -491,7 +491,7 @@
     "タイプ": "OLL",
     "ナンバー": "47",
     "愛称": "L(1-2)",
-    "手順": "\\begin{array}{l}\nR'U'-(x)-R'URU'-R'URU'-(x')-UR \\\\\n\\end{array} \n",
+    "手順": "\\begin{array}{l}\nR'U'-L'wURU'-R'URU'-(x)-UR(要検証) \\\\\n\\end{array} \n",
     "手順略称": "(x)=上面手前",
     "画像": "47.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
