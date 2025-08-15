@@ -779,7 +779,7 @@
     "タイプ": "PLL",
     "ナンバー": "n19",
     "愛称": "G-perm B(反時計回り)",
-    "手順": "\\begin{array}{l}\nF'U'F-R2UFw-R'URU'-RU'wR'2\n\\end{array} \n",
+    "手順": "\\begin{array}{l}\nF'U'F-R2Uw-R'URU'-RU'wR'2\n\\end{array} \n",
     "手順略称": "くずしG-perm a(時計回り)",
     "画像": "n19_simple.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
