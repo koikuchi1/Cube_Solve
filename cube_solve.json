@@ -163,7 +163,7 @@
     "タイプ": "OLL",
     "ナンバー": "18-1",
     "愛称": "くの字",
-    "手順": "\\begin{array}{l}\n\\displaystyle \\frac{RU2-R2-FRF'-U2}{\\text{\\#1前半と同じ}} - \\displaystyle \\frac{RwR'-URUR'w}{\\text{\\#57H後半と同じ}} \n\\end{array} \n",
+    "手順": "\\begin{array}{l}\n\\displaystyle \\frac{RU2-R2-FRF'-U2}{\\text{\\#1サイコロ1前半と同じ}} - \\displaystyle \\frac{RwR'-URUR'w}{\\text{\\#57H後半と同じ}} \n\\end{array} \n",
     "手順略称": "くずし同手順 + U2",
     "画像": "18-1.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
