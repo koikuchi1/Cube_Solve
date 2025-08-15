@@ -707,7 +707,7 @@
     "タイプ": "PLL",
     "ナンバー": "n10",
     "愛称": "F-perm(平行)",
-    "手順": "\\begin{array}{l}\nR'UF'-RUR'U'-R'F-R2U'R'U'-RUR'-UR(要確認)\n\\end{array} \n",
+    "手順": "\\begin{array}{l}\nR'U'F'-RUR'U'-R'F-R2U'R'U'-RUR'-UR(要確認)\n\\end{array} \n",
     "手順略称": "くずし同手順",
     "画像": "n10.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
