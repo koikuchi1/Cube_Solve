@@ -107,7 +107,7 @@
     "タイプ": "OLL",
     "ナンバー": "12",
     "愛称": "Z(上z)",
-    "手順": "\\begin{array}{l}\nM'- \\displaystyle \\frac{R'U'2R-UR'UR}{ \\text{\\#26を奥向きに} } -U'M\n\\end{array} \n",
+    "手順": "\\begin{array}{l}\nM'- \\displaystyle \\frac{R'U'2R-UR'UR}{ \\text{\\#26を奥向きに} } -U'M(要検証)\n\\end{array} \n",
     "手順略称": "",
     "画像": "12.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
