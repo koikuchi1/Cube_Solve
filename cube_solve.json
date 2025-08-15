@@ -395,7 +395,7 @@
     "タイプ": "OLL",
     "ナンバー": "39-1",
     "愛称": "空気イス(左向き)",
-    "手順": "\\begin{array}{l}\n\\displaystyle \\frac{F-RUR'U'-F'}{ \\text{#45+1:6手T} }  \\displaystyle \\frac{R'U'RU'-R'U2-R}{ \\text{\\#26 sune} } \n\\end{array} \n",
+    "手順": "\\begin{array}{l}\n\\displaystyle \\frac{F-RUR'U'-F'}{ \\text{#45-1:6手T} }  \\displaystyle \\frac{R'U'RU'-R'U2-R}{ \\text{\\#26 sune} } \n\\end{array} \n",
     "手順略称": "くずし#32アンテナ + U2",
     "画像": "39-1.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
