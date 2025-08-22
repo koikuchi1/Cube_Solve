@@ -3,7 +3,7 @@
     "タイプ": "OLL",
     "ナンバー": "01",
     "愛称": "サイコロ1",
-    "手順": "\\displaystyle \\frac {RU-R2-FRF'-U2}{\\text{\\#18前半と同じ}} -R'FR'F'\n",
+    "手順": "\\displaystyle \\frac {RU2-R2-FRF'-U2}{\\text{\\#18前半と同じ}} -R'FR'F'\n",
     "手順略称": null,
     "画像": "01.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
