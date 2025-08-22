@@ -403,7 +403,7 @@
     "タイプ": "OLL",
     "ナンバー": "39-2",
     "愛称": "空気イス(左向き逆さ)",
-    "手順": "\\begin{array}{l}\nLwU'-L'wU'-LwFU-F'R'\n\\displaystyle\ \frac{RUR'U-RU2R'}{ \\text{\#26 right sune} }-U- \\displaystyle \\frac{Fw-RUR'U'-Fw}{ \\text{\#44-1 指差し右手上} }\\end{array} \n",
+    "手順": "\\begin{array}{l}\nLwU'-L'wU'-LwFU-F'R'\n\\displaystyle \\frac{RUR'U-RU2R'}{ \\text{#26 right sune} }-U- \\displaystyle \\frac{Fw-RUR'U'-Fw}{ \\text{#44-1 指差し右手上} }\\end{array} \n",
     "手順略称": "左手メイン、くずし#32アンテナ",
     "画像": "39-2.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
