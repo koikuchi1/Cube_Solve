@@ -379,7 +379,7 @@
     "タイプ": "OLL",
     "ナンバー": "37",
     "愛称": "四角□▫",
-    "手順": "\\begin{array}{l}\nF-RU'R'U'-RUR'-F'\n\\end{array} \n",
+    "手順": "\\begin{array}{l}F-R'F'RU-RU'R'\\hspace{1em} &(1つ目)\\\\\nF-RU'R'U'-RUR'-F'\\hspace{1em} &(2つ目)\n\\end{array} \n",
     "手順略称": "くずし#33完全T",
     "画像": "37.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
