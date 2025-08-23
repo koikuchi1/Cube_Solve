@@ -115,7 +115,7 @@
     "タイプ": "OLL",
     "ナンバー": "13",
     "愛称": "ピストル(右向き)",
-    "手順": "\\begin{array}{l}\nF-URU'R'2-F'R-URU'R'\n\\end{array} \n",
+    "手順": "\\begin{array}{l}\n \\displaystyle \\frac{F-URU'(R'-F')}{ \\text{#44右手下指差し} } - \\displaystyle \\frac{(F-R')R'2-F'RU-RU'R'}{ \\text{#37四角□▫1つ目} } \n\\end{array} \n",
     "手順略称": "09-12揃い羽の逆手順",
     "画像": "13.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
