@@ -259,7 +259,7 @@
     "タイプ": "OLL",
     "ナンバー": "25-1",
     "愛称": "8の字(左上)",
-    "手順": "\\begin{array}{l}\nF-R'F'RwU-RU'R'w\\\\(x')-UR'U'-LUR-U'Rw\n\\end{array}  \n",
+    "手順": "\\begin{array}{l}\nF-R'F'Rw-URU'-R'w\\hspace{1em}\\text{１つ目}\\\\(x')-UR'U'-LUR-U'Rw\\hspace{1em}\\text{１つ目を(X')したもの}\n\\end{array}  \n",
     "手順略称": "くずし#24-1横目左向き、#24-2横目下向き + U2",
     "画像": "25-1.jpg"
   },
@@ -355,7 +355,7 @@
     "タイプ": "OLL",
     "ナンバー": "34-2",
     "愛称": "アーチU",
-    "手順": "\\begin{array}{l}\n\\displaystyle \\frac{ F-RUR'U'- \\underline{R'} F'}{\\text{\\#45:6手Tに似ている}}- \\displaystyle \\frac{ Rw-URU'-R'w}{\\text{\\#57Hの後半と同じ}} \\\\\n\\end{array} \n",
+    "手順": "\\begin{array}{l}\n\\displaystyle \\frac{ F-RUR'U'-  (F')}{\\text{#45:6手T}}- \\displaystyle \\frac{ (F)-R'F'Rw-URU'-R'w}{\\text{#25-1:8の字左上(１つ目)}} \\\\\n\\end{array} \n",
     "手順略称": "",
     "画像": "34-2.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
