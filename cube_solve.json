@@ -443,7 +443,7 @@
     "タイプ": "OLL",
     "ナンバー": "43-2",
     "愛称": "指差し(左手下)",
-    "手順": "\\begin{array}{l}\nF'w-L'U'LU-Fw\n\\end{array} \n",
+    "手順": "\\begin{array}{l}\nR'U'-FR'F'-RUR \\hspace{1em}(1つ目) \\\\L'wB'-UR'U'-LwUR\\hspace{1em}(1つ目の実際の回すイメージ) \\\\F'w-L'U'LU-Fw \\hspace{1em}(1つ目) \n\\end{array} \n",
     "手順略称": "くずし#46コ",
     "画像": "43-2.jpg"
   },
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
