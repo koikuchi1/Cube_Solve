@@ -491,8 +491,8 @@
     "タイプ": "OLL",
     "ナンバー": "47",
     "愛称": "L(1-2)",
-    "手順": "\\begin{array}{l}\nR'U'-L'wURU'-R'URU'-(x)-UR \\\\\n\\end{array} \n",
-    "手順略称": "(x)=上面手前",
+    "手順": "\\begin{array}{l}\nRU'R'-FRF'R'-FRF'-UR \\hspace{1em} (1つ目) \\\\R'U'L'w-URU'-R'URU'-BLw \\hspace{1em} (実際の手の動かし方)\n\\end{array} \n",
+    "手順略称": "#46コの中間(FR部分)2回",
     "画像": "47.jpg"
   },
   {
@@ -801,6 +801,7 @@
   }
 
 ]
+
 
 
 
