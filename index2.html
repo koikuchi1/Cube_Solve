@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>キューブ手順表</title>
+<style>
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #999; padding: 4px 8px; text-align: left; }
+  th { background-color: #f2f2f2; }
+  .substep { padding-left: 20px; font-style: italic; color: #555; }
+</style>
+</head>
+<body>
+
+<h2>キューブ手順表（未完成）</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>番号</th>
+      <th>名称</th>
+      <th>対応手順</th>
+      <th>回転 / 向き</th>
+      <th>備考</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 逆手順の例 -->
+    <tr>
+      <td>33</td>
+      <td>T(完全T)</td>
+      <td>37 – 四角□▫</td>
+      <td>RU</td>
+      <td>逆手順</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>四角□▫</td>
+      <td>33 – T(完全T)</td>
+      <td>FR'</td>
+      <td>逆手順</td>
+    </tr>
+
+    <!-- 派生ループの例 -->
+    <tr>
+      <td>45-1</td>
+      <td>T(6手T)</td>
+      <td>44-2 – 指差し(右手下)</td>
+      <td>F-RUR'U'-F'</td>
+      <td>6手Tループ派生</td>
+    </tr>
+    <tr class="substep">
+      <td>中間</td>
+      <td>（中間2回）</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>48-1</td>
+      <td>」(閉じカッコ」)(2-1)</td>
+      <td>51-2 – 棒(0-2横)</td>
+      <td></td>
+      <td>6手Tループ派生</td>
+    </tr>
+
+    <!-- 単独手順の例 -->
+    <tr>
+      <td>22</td>
+      <td>十字(右上下)</td>
+      <td>同じ</td>
+      <td>RU2</td>
+      <td>単独</td>
+    </tr>
+
+    <!-- 2手順組み合わせの例 -->
+    <tr>
+      <td>44-2 + 37</td>
+      <td>指差し(右手下) + 四角□▫</td>
+      <td>33 + 45-1</td>
+      <td></td>
+      <td>2手順組み合わせ</td>
+    </tr>
+
+  </tbody>
+</table>
+
+</body>
+</html>
