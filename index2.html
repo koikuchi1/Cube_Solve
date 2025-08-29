@@ -5,38 +5,13 @@
   <title>逆手順</title>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-    h2 {
-      text-align: center;
-    }
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .card {
-      border: 1px solid #ccc;
-      padding: 10px;
-      width: 300px;
-      text-align: center;
-    }
-    .card img {
-      width: 20%; /* 元のサイズの20% */
-      height: auto;
-    }
-    .arrow {
-      font-size: 2em;
-      font-weight: bold;
-    }
-    .latex {
-      font-family: 'Courier New', monospace;
-      margin-top: 10px;
-    }
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h2 { text-align: center; }
+    .container { display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 20px; }
+    .card { border: 1px solid #ccc; padding: 10px; width: 300px; text-align: center; }
+    .card img { width: 20%; height: auto; }
+    .arrow { font-size: 2em; font-weight: bold; }
+    .latex { font-family: 'Courier New', monospace; margin-top: 10px; }
   </style>
 </head>
 <body>
@@ -52,42 +27,30 @@
 
         const container = document.getElementById('content');
 
-        // No.37 のカード
-        const card37 = document.createElement('div');
-        card37.className = 'card';
-        card37.innerHTML = `
-          <p>${num37["タイプ"]} No.${num37["ナンバー"]}</p>
-          <p>${num37["愛称"]}</p>
-          <img src="images/OLL/${num37["画像"]}" alt="${num37["ナンバー"]}">
-          <div class="latex">$$${num37["手順"]}$$</div>
-          <p>${num37["手順略称"]}</p>
-        `;
+        function createCard(info) {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <p>${info["タイプ"]} No.${info["ナンバー"]}</p>
+            <p>${info["愛称"]}</p>
+            <img src="images/OLL/${info["画像"]}" alt="${info["ナンバー"]}">
+            <div class="latex">$$${info["手順"]}$$</div>
+            <p>${info["手順略称"]}</p>
+          `;
+          return card;
+        }
 
-        // ⇔
+        // 左右に並べる: 左33 ⇔ 右37
+        container.appendChild(createCard(num33));
         const arrow = document.createElement('div');
         arrow.className = 'arrow';
         arrow.textContent = '⇔';
-
-        // No.33 のカード
-        const card33 = document.createElement('div');
-        card33.className = 'card';
-        card33.innerHTML = `
-          <p>${num33["タイプ"]} No.${num33["ナンバー"]}</p>
-          <p>${num33["愛称"]}</p>
-          <img src="images/OLL/${num33["画像"]}" alt="${num33["ナンバー"]}">
-          <div class="latex">$$${num33["手順"]}$$</div>
-          <p>${num33["手順略称"]}</p>
-        `;
-
-        container.appendChild(card33);
         container.appendChild(arrow);
-        container.appendChild(card37);
+        container.appendChild(createCard(num37));
 
         MathJax.typesetPromise();
       })
-      .catch(error => console.error(error));
+      .catch(err => console.error('JSON読み込みエラー:', err));
   </script>
 </body>
 </html>
-
-
