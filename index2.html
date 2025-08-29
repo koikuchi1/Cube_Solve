@@ -62,19 +62,25 @@
 
   <!-- 逆手順 セクション -->
   <h2>逆手順</h2>
-  <div id="content" class="container">
-    <div id="pairsContainer" class="pair-list"></div>
+  <div id="content_compt" class="container">
+    <div id="pairsContainer_compT" class="pair-list"></div>
   </div>
 
-  <!-- 6手Tループ セクション（新規追加） -->
+  <!-- 6手Tループ セクション -->
   <h2>6手Tループ</h2>
   <div id="content_tloop" class="container">
     <div id="pairsContainer_Tloop" class="pair-list"></div>
   </div>
 
+  <!-- Fw式6手Tループ セクション -->
+  <h2>Fw式6手T(指差し(右手上))ループ</h2>
+  <div id="content_Fwtloop" class="container">
+    <div id="pairsContainer_FwTloop" class="pair-list"></div>
+  </div>
+
   <script>
     // 既存の逆手順ペア（矢印なし）
-    const pairs_main = [
+    const pairs_compT = [
       { left: "33", right: "37", arrow: false },
       { left: "27", right: "26-1", arrow: false }
     ];
@@ -83,6 +89,13 @@
     const pairs_Tloop = [
       { left: "45-1", right: "44-2", arrow: true },   // その下に ↓
       { left: "48-1", right: "51-2", arrow: true },   // その下に ↓
+      { left: "21-1", right: "21-2", arrow: false }   // 最後は矢印なし
+    ];
+
+    // 6手Tループで追加するペア（指定どおり、1つ目と2つ目の下に ↓ を入れる）
+    const pairs_FwTloop = [
+      { left: "44-1", right: "45-2", arrow: true },   // その下に ↓
+      { left: "51-1", right: "48-2", arrow: true },   // その下に ↓
       { left: "21-1", right: "21-2", arrow: false }   // 最後は矢印なし
     ];
 
@@ -152,7 +165,7 @@
             if (pair.arrow) {
               const v = document.createElement('div');
               v.className = 'v-arrow';
-              v.textContent = "↓ + 中間(RUR'U'またはURU'R')1回";
+              v.textContent ="↓ + 中間(RUR'U'またはURU'R')1回";
               container.appendChild(v);
             }
           });
@@ -164,13 +177,12 @@
         }
 
         // 実行：それぞれのセクションに描画
-        renderPairs("pairsContainer", pairs_main);
+        renderPairs("pairsContainer_compT", pairs_compT);
         renderPairs("pairsContainer_Tloop", pairs_Tloop);
+        renderPairs("pairsContainer_FwTloop", pairs_Tloop);
       })
       .catch(e => console.error('JSON読み込みエラー:', e));
   </script>
 
 </body>
 </html>
-
-
