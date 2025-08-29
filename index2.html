@@ -1,89 +1,91 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>キューブ手順表</title>
-<style>
-  table { border-collapse: collapse; width: 100%; }
-  th, td { border: 1px solid #999; padding: 4px 8px; text-align: left; }
-  th { background-color: #f2f2f2; }
-  .substep { padding-left: 20px; font-style: italic; color: #555; }
-</style>
+  <meta charset="UTF-8">
+  <title>逆手順</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 300px;
+      text-align: center;
+    }
+    .card img {
+      width: 10%; /* 元のサイズの10% */
+      height: auto;
+    }
+    .arrow {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .latex {
+      font-family: 'Courier New', monospace;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
+  <h2>逆手順</h2>
+  <div id="content" class="container"></div>
 
-<h2>キューブ手順表（未完成）</h2>
+  <script>
+    fetch('cube_solve.json')
+      .then(response => response.json())
+      .then(data => {
+        const num33 = data.find(item => item["ナンバー"] === "33");
+        const num37 = data.find(item => item["ナンバー"] === "37");
 
-<table>
-  <thead>
-    <tr>
-      <th>番号</th>
-      <th>名称</th>
-      <th>対応手順</th>
-      <th>回転 / 向き</th>
-      <th>備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- 逆手順の例 -->
-    <tr>
-      <td>33</td>
-      <td>T(完全T)</td>
-      <td>37 – 四角□▫</td>
-      <td>RU</td>
-      <td>逆手順</td>
-    </tr>
-    <tr>
-      <td>37</td>
-      <td>四角□▫</td>
-      <td>33 – T(完全T)</td>
-      <td>FR'</td>
-      <td>逆手順</td>
-    </tr>
+        const container = document.getElementById('content');
 
-    <!-- 派生ループの例 -->
-    <tr>
-      <td>45-1</td>
-      <td>T(6手T)</td>
-      <td>44-2 – 指差し(右手下)</td>
-      <td>F-RUR'U'-F'</td>
-      <td>6手Tループ派生</td>
-    </tr>
-    <tr class="substep">
-      <td>中間</td>
-      <td>（中間2回）</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>48-1</td>
-      <td>」(閉じカッコ」)(2-1)</td>
-      <td>51-2 – 棒(0-2横)</td>
-      <td></td>
-      <td>6手Tループ派生</td>
-    </tr>
+        // No.37 のカード
+        const card37 = document.createElement('div');
+        card37.className = 'card';
+        card37.innerHTML = `
+          <p>${num37["タイプ"]} No.${num37["ナンバー"]}</p>
+          <p>${num37["愛称"]}</p>
+          <img src="images/OLL/${num37["画像"]}" alt="${num37["ナンバー"]}">
+          <div class="latex">$$${num37["手順"]}$$</div>
+          <p>${num37["手順略称"]}</p>
+        `;
 
-    <!-- 単独手順の例 -->
-    <tr>
-      <td>22</td>
-      <td>十字(右上下)</td>
-      <td>同じ</td>
-      <td>RU2</td>
-      <td>単独</td>
-    </tr>
+        // ⇔
+        const arrow = document.createElement('div');
+        arrow.className = 'arrow';
+        arrow.textContent = '⇔';
 
-    <!-- 2手順組み合わせの例 -->
-    <tr>
-      <td>44-2 + 37</td>
-      <td>指差し(右手下) + 四角□▫</td>
-      <td>33 + 45-1</td>
-      <td></td>
-      <td>2手順組み合わせ</td>
-    </tr>
+        // No.33 のカード
+        const card33 = document.createElement('div');
+        card33.className = 'card';
+        card33.innerHTML = `
+          <p>${num33["タイプ"]} No.${num33["ナンバー"]}</p>
+          <p>${num33["愛称"]}</p>
+          <img src="images/OLL/${num33["画像"]}" alt="${num33["ナンバー"]}">
+          <div class="latex">$$${num33["手順"]}$$</div>
+          <p>${num33["手順略称"]}</p>
+        `;
 
-  </tbody>
-</table>
+        container.appendChild(card37);
+        container.appendChild(arrow);
+        container.appendChild(card33);
 
+        MathJax.typesetPromise();
+      })
+      .catch(error => console.error(error));
+  </script>
 </body>
 </html>
