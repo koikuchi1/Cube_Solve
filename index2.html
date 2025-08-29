@@ -9,21 +9,20 @@
     h1 { text-align: center; }
     h2 { text-align: center; }
 
-    /* 外側の全体コンテナは縦並び */
+    /* ペア同士は縦並び */
     #content {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 30px; /* ペア同士の間隔 */
+      gap: 30px;         /* ペア間の間隔 */
       margin-top: 20px;
     }
 
-    /* ペアごとに横並び */
+    /* 1つのペア内は横並び */
     .pair {
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 20px;
+      gap: 20px;         /* カードと ⇔ の間隔 */
     }
 
     .card {
@@ -32,19 +31,11 @@
       width: 300px;
       text-align: center;
     }
-    .card img {
-      width: 20%;
-      height: auto;
-    }
-    .arrow {
-      font-size: 2em;
-      font-weight: bold;
-    }
-    .latex {
-      font-family: 'Courier New', monospace;
-      margin-top: 10px;
-    }
+    .card img { width: 20%; height: auto; }
+    .arrow { font-size: 2em; font-weight: bold; }
+    .latex { font-family: 'Courier New', monospace; margin-top: 10px; }
   </style>
+
 </head>
 <body>
   <h1>OLL</h1>
@@ -53,58 +44,54 @@
 
   <script>
     fetch('cube_solve.json')
-    .then(response => response.json())
-    .then(data => {
-      const container = document.getElementById('content');
+      .then(r => r.json())
+      .then(data => {
+        const content = document.getElementById('content');
 
-      function createCard(info) {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-          <p>${info["タイプ"]} No.${info["ナンバー"]}</p>
-          <p>${info["愛称"]}</p>
-          <img src="images/OLL/${info["画像"]}" alt="${info["ナンバー"]}">
-          <div class="latex">$$${info["手順"]}$$</div>
-          <p>${info["手順略称"]}</p>
-        `;
-        return card;
-      }
+        const byNo = no => data.find(it => it["ナンバー"] === no);
 
-      // ====== 33 と 37 ======
-      const num33 = data.find(item => item["ナンバー"] === "33");
-      const num37 = data.find(item => item["ナンバー"] === "37");
+        const createCard = (info) => {
+          const c = document.createElement('div');
+          c.className = 'card';
+          c.innerHTML = `
+            <p>${info["タイプ"]} No.${info["ナンバー"]}</p>
+            <p>${info["愛称"]}</p>
+            <img src="images/OLL/${info["画像"]}" alt="${info["ナンバー"]}">
+            <div class="latex">$$${info["手順"]}$$</div>
+            <p>${info["手順略称"]}</p>
+          `;
+          return c;
+        };
 
-      const pair1 = document.createElement('div');
-      pair1.className = 'container';
-      pair1.appendChild(createCard(num33));
+        const addPair = (leftNo, rightNo) => {
+          const left = byNo(leftNo);
+          const right = byNo(rightNo);
+          if (!left || !right) {
+            console.warn('見つからない番号があります:', leftNo, rightNo);
+            return;
+          }
+          const pair = document.createElement('div');
+          pair.className = 'pair';
+          pair.appendChild(createCard(left));
 
-      const arrow1 = document.createElement('div');
-      arrow1.className = 'arrow';
-      arrow1.textContent = '⇔';
-      pair1.appendChild(arrow1);
-      pair1.appendChild(createCard(num37));
+          const arrow = document.createElement('div');
+          arrow.className = 'arrow';
+          arrow.textContent = '⇔';
+          pair.appendChild(arrow);
 
-      container.appendChild(pair1);
+          pair.appendChild(createCard(right));
+          content.appendChild(pair);
+        };
 
-      // ====== 27 と 26-1 ======
-      const num27 = data.find(item => item["ナンバー"] === "27");
-      const num26_1 = data.find(item => item["ナンバー"] === "26-1");
+        // ペア1: 左33 ⇔ 右37（横並び）
+        addPair("33", "37");
+        // ペア2: 左27 ⇔ 右26-1（横並び）
+        addPair("27", "26-1");
 
-      const pair2 = document.createElement('div');
-      pair2.className = 'container';
-      pair2.appendChild(createCard(num27));
-
-      const arrow2 = document.createElement('div');
-      arrow2.className = 'arrow';
-      arrow2.textContent = '⇔';
-      pair2.appendChild(arrow2);
-      pair2.appendChild(createCard(num26_1));
-
-      container.appendChild(pair2);
-
-      MathJax.typesetPromise();
-    })
-    .catch(err => console.error('JSON読み込みエラー:', err));
+        MathJax.typesetPromise();
+      })
+      .catch(e => console.error('JSON読み込みエラー:', e));
   </script>
+
 </body>
 </html>
