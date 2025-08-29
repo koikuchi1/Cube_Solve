@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>逆手順</title>
+  <title>OLL関連性</title>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; }
@@ -22,39 +22,58 @@
 
   <script>
     fetch('cube_solve.json')
-      .then(response => response.json())
-      .then(data => {
-        const num33 = data.find(item => item["ナンバー"] === "33");
-        const num37 = data.find(item => item["ナンバー"] === "37");
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('content');
 
-        const container = document.getElementById('content');
+      function createCard(info) {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <p>${info["タイプ"]} No.${info["ナンバー"]}</p>
+          <p>${info["愛称"]}</p>
+          <img src="images/OLL/${info["画像"]}" alt="${info["ナンバー"]}">
+          <div class="latex">$$${info["手順"]}$$</div>
+          <p>${info["手順略称"]}</p>
+        `;
+        return card;
+      }
 
-        function createCard(info) {
-          const card = document.createElement('div');
-          card.className = 'card';
-          card.innerHTML = `
-            <p>${info["タイプ"]} No.${info["ナンバー"]}</p>
-            <p>${info["愛称"]}</p>
-            <img src="images/OLL/${info["画像"]}" alt="${info["ナンバー"]}">
-            <div class="latex">$$${info["手順"]}$$</div>
-            <p>${info["手順略称"]}</p>
-          `;
-          return card;
-        }
+      // ====== 33 と 37 ======
+      const num33 = data.find(item => item["ナンバー"] === "33");
+      const num37 = data.find(item => item["ナンバー"] === "37");
 
-        // 左右に並べる: 左33 ⇔ 右37
-        container.appendChild(createCard(num33));
-        const arrow = document.createElement('div');
-        arrow.className = 'arrow';
-        arrow.textContent = '⇔';
-        container.appendChild(arrow);
-        container.appendChild(createCard(num37));
+      const pair1 = document.createElement('div');
+      pair1.className = 'container';
+      pair1.appendChild(createCard(num33));
 
-        MathJax.typesetPromise();
-      })
-      .catch(err => console.error('JSON読み込みエラー:', err));
+      const arrow1 = document.createElement('div');
+      arrow1.className = 'arrow';
+      arrow1.textContent = '⇔';
+      pair1.appendChild(arrow1);
+      pair1.appendChild(createCard(num37));
+
+      container.appendChild(pair1);
+
+      // ====== 27 と 26-1 ======
+      const num27 = data.find(item => item["ナンバー"] === "27");
+      const num26_1 = data.find(item => item["ナンバー"] === "26-1");
+
+      const pair2 = document.createElement('div');
+      pair2.className = 'container';
+      pair2.appendChild(createCard(num27));
+
+      const arrow2 = document.createElement('div');
+      arrow2.className = 'arrow';
+      arrow2.textContent = '⇔';
+      pair2.appendChild(arrow2);
+      pair2.appendChild(createCard(num26_1));
+
+      container.appendChild(pair2);
+
+      MathJax.typesetPromise();
+    })
+    .catch(err => console.error('JSON読み込みエラー:', err));
   </script>
 </body>
 </html>
-
-
