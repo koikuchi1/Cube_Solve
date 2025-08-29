@@ -9,20 +9,29 @@
     h1 { text-align: center; }
     h2 { text-align: center; }
 
-    /* ペア同士は縦並び */
+    /* 全体：ペア同士は縦並び（上から下へ） */
     #content {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 30px;         /* ペア間の間隔 */
+      gap: 30px;         /* ペアグループ間の間隔 */
       margin-top: 20px;
+    }
+
+    /* ペアリスト（各セクションで使うコンテナ） */
+    .pair-list {
+      display: flex;
+      flex-direction: column; /* ペア同士は縦並び */
+      gap: 24px;
+      align-items: center;
+      width: 100%;
     }
 
     /* 1つのペア内は横並び */
     .pair {
       display: flex;
       align-items: center;
-      gap: 20px;         /* カードと ⇔ の間隔 */
+      gap: 20px;         /* 左カード - ⇔ - 右カード の間隔 */
     }
 
     .card {
@@ -30,65 +39,133 @@
       padding: 10px;
       width: 300px;
       text-align: center;
+      background: #fff;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
     }
-    .card img { width: 20%; height: auto; }
-    .arrow { font-size: 2em; font-weight: bold; }
-    .latex { font-family: 'Courier New', monospace; margin-top: 10px; }
-  </style>
+    .card img { width: 20%; height: auto; display:block; margin: 0 auto 6px; }
 
+    .arrow { font-size: 2em; font-weight: bold; }
+
+    /* ペア間に入る縦矢印（条件付きで差し込む） */
+    .v-arrow {
+      text-align: center;
+      font-size: 1.6em;
+      line-height: 1;
+      color: #333;
+    }
+
+    .latex { font-family: 'Courier New', monospace; margin-top: 10px; white-space: pre-wrap; }
+  </style>
 </head>
 <body>
   <h1>OLL</h1>
+
+  <!-- 逆手順 セクション -->
   <h2>逆手順</h2>
-  <div id="content" class="container"></div>
+  <div id="content" class="container">
+    <div id="pairsContainer" class="pair-list"></div>
+  </div>
+
+  <!-- 6手Tループ セクション（新規追加） -->
+  <h2>6手Tループ</h2>
+  <div id="content_tloop" class="container">
+    <div id="pairsContainer_Tloop" class="pair-list"></div>
+  </div>
 
   <script>
+    // 既存の逆手順ペア（矢印なし）
+    const pairs_main = [
+      { left: "33", right: "37", arrow: false },
+      { left: "27", right: "26-1", arrow: false }
+    ];
+
+    // 6手Tループで追加するペア（指定どおり、1つ目と2つ目の下に ↓ を入れる）
+    const pairs_Tloop = [
+      { left: "45-1", right: "44-2", arrow: true },   // その下に ↓
+      { left: "48-1", right: "51-2", arrow: true },   // その下に ↓
+      { left: "21-1", right: "21-2", arrow: false }   // 最後は矢印なし
+    ];
+
     fetch('cube_solve.json')
       .then(r => r.json())
       .then(data => {
-        const content = document.getElementById('content');
-
+        // 番号で検索する便利関数
         const byNo = no => data.find(it => it["ナンバー"] === no);
 
+        // 情報が見つからないときのプレースホルダカード
+        const createPlaceholderCard = (label) => {
+          const ph = document.createElement('div');
+          ph.className = 'card';
+          ph.innerHTML = `<p>${label}</p><p>データが見つかりません</p>`;
+          return ph;
+        };
+
+        // 実際のカードを作る関数（MathJax 用に LaTeX を $$...$$ で囲む）
         const createCard = (info) => {
+          if (!info) return createPlaceholderCard('—');
+
           const c = document.createElement('div');
           c.className = 'card';
+          // info["手順"] は JSON 側で LaTeX（バックスラッシュ含む）になっている想定
           c.innerHTML = `
             <p>${info["タイプ"]} No.${info["ナンバー"]}</p>
             <p>${info["愛称"]}</p>
-            <img src="images/OLL/${info["画像"]}" alt="${info["ナンバー"]}">
+            <img src="images/OLL/${info["画像"]}" alt="No.${info["ナンバー"]}">
             <div class="latex">$$${info["手順"]}$$</div>
-            <p>${info["手順略称"]}</p>
+            <p>${info["手順略称"] || ''}</p>
           `;
           return c;
         };
 
-        const addPair = (leftNo, rightNo) => {
-          const left = byNo(leftNo);
-          const right = byNo(rightNo);
-          if (!left || !right) {
-            console.warn('見つからない番号があります:', leftNo, rightNo);
+        // renderPairs 関数（任意のコンテナID に対して pairs 配列を描画）
+        function renderPairs(containerId, pairsArray) {
+          const container = document.getElementById(containerId);
+          if (!container) {
+            console.warn('container not found:', containerId);
             return;
           }
-          const pair = document.createElement('div');
-          pair.className = 'pair';
-          pair.appendChild(createCard(left));
+          container.innerHTML = ''; // 既存内容をクリア
 
-          const arrow = document.createElement('div');
-          arrow.className = 'arrow';
-          arrow.textContent = '⇔';
-          pair.appendChild(arrow);
+          pairsArray.forEach((pair, index) => {
+            const leftInfo = byNo(pair.left);
+            const rightInfo = byNo(pair.right);
 
-          pair.appendChild(createCard(right));
-          content.appendChild(pair);
-        };
+            // ペア行（横並び）
+            const pairDiv = document.createElement('div');
+            pairDiv.className = 'pair';
 
-        // ペア1: 左33 ⇔ 右37（横並び）
-        addPair("33", "37");
-        // ペア2: 左27 ⇔ 右26-1（横並び）
-        addPair("27", "26-1");
+            // 左カード
+            pairDiv.appendChild( leftInfo ? createCard(leftInfo) : createPlaceholderCard('左: ' + pair.left) );
 
-        MathJax.typesetPromise();
+            // 横向きの ⇔ は常に表示
+            const mid = document.createElement('div');
+            mid.className = 'arrow';
+            mid.textContent = '⇔';
+            pairDiv.appendChild(mid);
+
+            // 右カード
+            pairDiv.appendChild( rightInfo ? createCard(rightInfo) : createPlaceholderCard('右: ' + pair.right) );
+
+            container.appendChild(pairDiv);
+
+            // 縦矢印（pair.arrow が true のときのみ表示）
+            if (pair.arrow) {
+              const v = document.createElement('div');
+              v.className = 'v-arrow';
+              v.textContent = '↓';
+              container.appendChild(v);
+            }
+          });
+
+          // MathJax の再描画
+          if (window.MathJax && MathJax.typesetPromise) {
+            MathJax.typesetPromise();
+          }
+        }
+
+        // 実行：それぞれのセクションに描画
+        renderPairs("pairsContainer", pairs_main);
+        renderPairs("pairsContainer_Tloop", pairs_Tloop);
       })
       .catch(e => console.error('JSON読み込みエラー:', e));
   </script>
