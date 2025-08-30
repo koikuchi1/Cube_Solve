@@ -240,14 +240,15 @@
             ];
             //単独手順2回
             const pairs_single2times = [
-            { left: "14", right: "", arrowType: "none" },
+            { left: "14", right: "10-2",midArrowType: "→ くずしのみ →", arrowType: "none" },
             { left: "23-1", right: "", arrowType: "none" },
             { left: "56", right: "", arrowType: "none" },
             ];
             //単独手順3回
             const pairs_single3times = [
             { left: "30", right: "", arrowType: "none" },
-            { left: "11", right: "12",midArrowType: "← 類似 →"  , arrowType: "none"},
+            { left: "11", right: "12",midArrowType: "← 類似 →",arrowType: "down_mid", mid: "類似" },
+            { left: "10-2", right: "", arrowType: "none" },
             ];
             //単独手順5回
             const pairs_single5times = [
@@ -412,5 +413,3 @@
     </div>
 </body>
 </html>
-
-
