@@ -181,7 +181,7 @@
     const pairs_RRwloop = [
       { left: "08", right: "05", arrowType: "down_mid", mid: "RU'R'U またはRUR'U' を1回" },
       { left: "53-1", right: "53-2", arrowType: "down_mid", mid: "RU'R'U またはRUR'U' を1回" },
-      { left: "25-4", right: "", arrowType: "none" }
+      { left: "25-4", right: "", arrowType: "none",midArrowType: "" }
     ];
     //2手順組み合わせ
     const pairs_2combo = [
@@ -194,37 +194,36 @@
     ];
     //単独手順
     const pairs_single = [
-      { left: "22", right: "", arrowType: "none" },
-      { left: "20", right: "", arrowType: "none" },
-      { left: "52-2", right: "", arrowType: "none" },
+      { left: "22", right: "", arrowType: "none", midArrowType: "" },
+      { left: "20", right: "", arrowType: "none", midArrowType: "" },
+      { left: "52-2", right: "", arrowType: "none", midArrowType: "" },
     ];
     //単独手順2回
     const pairs_single2times = [
-      { left: "14", right: "", arrowType: "none" },
-      { left: "23-1", right: "", arrowType: "none" },
-      { left: "56", right: "", arrowType: "none" },
+      { left: "14", right: "", arrowType: "none", midArrowType: "" },
+      { left: "23-1", right: "", arrowType: "none", midArrowType: "" },
+      { left: "56", right: "", arrowType: "none", midArrowType: "" },
     ];
     //単独手順3回
     const pairs_single3times = [
-      { left: "30", right: "", arrowType: "none" },
+      { left: "30", right: "", arrowType: "none", midArrowType: "" },
     ];
     //単独手順5回
     const pairs_single5times = [
-      { left: "35", right: "", arrowType: "none" },
-      { left: "38", right: "", arrowType: "none" },
-      { left: "36", right: "", arrowType: "none" },
-      { left: "15", right: "", arrowType: "none" },
-      { left: "16-1", right: "", arrowType: "none" },
+      { left: "35", right: "", arrowType: "none", midArrowType: "" },
+      { left: "38", right: "", arrowType: "none", midArrowType: "" },
+      { left: "36", right: "", arrowType: "none", midArrowType: "" },
+      { left: "15", right: "", arrowType: "none", midArrowType: "" },
+      { left: "16-1", right: "", arrowType: "none", midArrowType: "" },
     ];
-
     //単独2手順組み合わせ
     const pairs_single2combo = [
-      { left: "39-2", right: "", arrowType: "none" },
-      { left: "18-1", right: "", arrowType: "none" },
+      { left: "39-2", right: "", arrowType: "none", midArrowType: "" },
+      { left: "18-1", right: "", arrowType: "none", midArrowType: "" },
     ];
     //単独手順2回2手順組み合わせ
     const pairs_single2combo2times = [
-      { left: "34-2", right: "", arrowType: "none" }
+      { left: "34-2", right: "", arrowType: "none", midArrowType: "" }
     ];
 
     /* ------------------------------------------------------------ */
@@ -300,7 +299,7 @@
 
             const mid = document.createElement('div');
             mid.className = 'arrow';
-            mid.textContent = '⇔';
+            mid.textContent = pair.midArrowType || '⇔';
             pairDiv.appendChild(mid);
 
             pairDiv.appendChild(rightInfo ? createCard(rightInfo) : createPlaceholderCard('右: ' + pair.right));
