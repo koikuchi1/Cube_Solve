@@ -299,7 +299,7 @@
 
             const mid = document.createElement('div');
             mid.className = 'arrow';
-            mid.textContent = pair.midArrowType || '⇔';
+            mid.textContent = pair.midArrowType || '';
             pairDiv.appendChild(mid);
 
             pairDiv.appendChild(rightInfo ? createCard(rightInfo) : createPlaceholderCard('右: ' + pair.right));
@@ -338,3 +338,4 @@
   </script>
 </body>
 </html>
+
