@@ -547,7 +547,7 @@
     "タイプ": "OLL",
     "ナンバー": "52-1",
     "愛称": "棒(3-1)",
-    "手順": "\\begin{array}{l}R'U'-(x')-UR'U'R-UR'U'R-(x)-UR \\hspace{1em} (1つ目) \\\\R'U'-(x')-UR'U'R-UR'U'Lw-UR \\hspace{1em} (1つ目実際の手順) \\\\R'F'-U'-FU'-RUR'-UR'(2つ目)\n\\end{array} \n",
+    "手順": "\\begin{array}{l}R'U'-(x')-UR'U'R-UR'U'R-(x)-UR \\hspace{1em} (1つ目) \\\\L'wB'-UR'U'R-UR'U'Lw-UR \\hspace{1em} (1つ目実際の手順) \\\\R'F'-U'-FU'-RUR'-UR'(2つ目)\n\\end{array} \n",
     "手順略称": "くずし47:1-2L、または同手順(2つ目) + U2",
     "画像": "52-1.jpg"
   },
@@ -809,6 +809,7 @@
   }
 
 ]
+
 
 
 
