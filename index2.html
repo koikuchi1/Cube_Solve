@@ -75,7 +75,8 @@
 
         .v-arrow {
             text-align: center;
-            font-size: 1.1em;
+            font-weight: bold;
+            font-size: 2em;
             line-height: 1.3;
             color: #333;
             white-space: pre-wrap;
@@ -193,34 +194,34 @@
             ];
             //6手Tループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
             const pairs_Tloop = [
-            { left: "45-1", right: "44-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+            { left: "45-1", right: "44-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "+中間(RUR'U' または URU'R' を1回)" },
             // 例: 単純な下向き矢印
-            { left: "48-1", right: "51-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+            { left: "48-1", right: "51-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "+中間(RUR'U' または URU'R' を1回)" },
             // 例: 矢印なし
             { left: "21-1", right: "", arrowType: "none" }
             ];
             //Fw式6手T(指差し(右手上))ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
             const pairs_FwTloop = [
-            { left: "44-1", right: "45-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
-            { left: "51-1", right: "48-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+            { left: "44-1", right: "45-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "+中間(RUR'U' または URU'R' を1回)" },
+            { left: "51-1", right: "48-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "+中間(RUR'U' または URU'R' を1回)" },
             { left: "21-1", right: "", arrowType: "none" }
             ];
             //コループ
             const pairs_KOloop = [
-            { left: "46", right: "43-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' または UR'U'R を1回" },
-            { left: "47", right: "52-1",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' または UR'U'R を1回" },
+            { left: "46", right: "43-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "+中間(R'URU' または UR'U'R を1回)" },
+            { left: "47", right: "52-1",midArrowType: "⇔" , arrowType: "down_mid", mid: "+中間(R'URU' または UR'U'R を1回)" },
             { left: "21-1", right: "" , arrowType: "none" }
             ];
             //Rw手順ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
             const pairs_Rwloop = [
-            { left: "07", right: "06",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' またはR'U'RU を1回" },
-            { left: "54-1", right: "54-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' またはR'U'RU を1回" },
+            { left: "07", right: "06",midArrowType: "⇔" , arrowType: "down_mid", mid: "+中間(R'URU' またはR'U'RU を1回)" },
+            { left: "54-1", right: "54-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "+中間(R'URU' またはR'U'RU を1回)" },
             { left: "25-3", right: "", arrowType: "none" }
             ];
             //R'w手順ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
             const pairs_RRwloop = [
-            { left: "08", right: "05",midArrowType: "⇔" , arrowType: "down_mid", mid: "RU'R'U またはRUR'U' を1回" },
-            { left: "53-1", right: "53-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RU'R'U またはRUR'U' を1回" },
+            { left: "08", right: "05",midArrowType: "⇔" , arrowType: "down_mid", mid: "+中間(RU'R'U またはRUR'U' を1回)" },
+            { left: "53-1", right: "53-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "+中間(RU'R'U またはRUR'U' を1回)" },
             { left: "25-4", right: "", arrowType: "none",midArrowType: "" }
             ];
             //2手順組み合わせ
@@ -326,7 +327,7 @@
                         return "↓";
                         case "down_mid":
                         // pair.mid があればそれを使い、なければデフォルト文言
-                        return "↓  + 中間(" + (pair.mid || "RUR'U' または URU'R'") + ")";
+                        return "↓ " + (pair.mid || "");
                         case "symbols":
                         // pair.symbols に配列を渡すとそれを結合して表示
                         if (Array.isArray(pair.symbols) && pair.symbols.length) {
