@@ -5,6 +5,11 @@
     <title>OLL関連性</title>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
+        #main-container {
+            transform: scale(0.67);  /* 67% に縮小 */
+            transform-origin: top center;  /* 上中央を基準に縮小 */
+            width: 100%;  /* もとの幅を維持 */
+        }
         body { font-family: Arial, sans-serif; margin: 20px; }
         h1 { text-align: center; }
         h2 {
@@ -25,11 +30,6 @@
             max-height: 0;  /* 初期折りたたみ */
             padding: 0;
             margin: 0;
-            /* 幅を67％に */
-//            width: 67%;
-            /* ここで全体を67％に縮小 */
-//            transform: scale(0.67);
-//            transform-origin: top center; /* 上から縮小 */    
         }
         .container.expanded { max-height: 5000px; padding: initial; margin: initial; } /* 展開時 */
 
@@ -69,312 +69,308 @@
     </style>
 </head>
 <body>
-    <h1>OLLくずし</h1>
+    <div id="main-container">
+        <h1>OLLくずし</h1>
 
-    <!-- 逆手順 セクション -->
-    <h2>逆手順</h2>
-    <div id="content_mutual" class="container">
-        <div id="pairsContainer_mutual" class="pair-list"></div>
-    </div>
+        <!-- 逆手順 セクション -->
+        <h2>逆手順</h2>
+        <div id="content_mutual" class="container">
+            <div id="pairsContainer_mutual" class="pair-list"></div>
+        </div>
 
-    <!-- 6手Tループ セクション -->
-    <h2>6手T5種ループ</h2>
-    <div id="content_tloop" class="container">
-        <div id="pairsContainer_Tloop" class="pair-list"></div>
-    </div>
+        <!-- 6手Tループ セクション -->
+        <h2>6手T5種ループ</h2>
+        <div id="content_tloop" class="container">
+            <div id="pairsContainer_Tloop" class="pair-list"></div>
+        </div>
 
-    <!-- Fw式6手Tループ セクション -->
-    <h2>Fw式6手T(指差し(右手上))5種ループ</h2>
-    <div id="content_Fwtloop" class="container">
-        <div id="pairsContainer_FwTloop" class="pair-list"></div>
-    </div>
+        <!-- Fw式6手Tループ セクション -->
+        <h2>Fw式6手T(指差し(右手上))5種ループ</h2>
+        <div id="content_Fwtloop" class="container">
+            <div id="pairsContainer_FwTloop" class="pair-list"></div>
+        </div>
 
-    <!-- コ：ループ セクション -->
-    <h2>コ：5種ループ</h2>
-    <div id="content_koloop" class="container">
-        <div id="pairsContainer_KOloop" class="pair-list"></div>
-    </div>
+        <!-- コ：ループ セクション -->
+        <h2>コ：5種ループ</h2>
+        <div id="content_koloop" class="container">
+            <div id="pairsContainer_KOloop" class="pair-list"></div>
+        </div>
 
-    <!-- Rw：ループ セクション -->
-    <h2>Rw手順：5種ループ</h2>
-    <div id="content_Rwloop" class="container">
-        <div id="pairsContainer_Rwloop" class="pair-list"></div>
-    </div>
+        <!-- Rw：ループ セクション -->
+        <h2>Rw手順：5種ループ</h2>
+        <div id="content_Rwloop" class="container">
+            <div id="pairsContainer_Rwloop" class="pair-list"></div>
+        </div>
 
-    <!-- R'w：ループ セクション -->
-    <h2>R'w手順：5種ループ</h2>
-    <div id="content_RRwloop" class="container">
-        <div id="pairsContainer_RRwloop" class="pair-list"></div>
-    </div>
+        <!-- R'w：ループ セクション -->
+        <h2>R'w手順：5種ループ</h2>
+        <div id="content_RRwloop" class="container">
+            <div id="pairsContainer_RRwloop" class="pair-list"></div>
+        </div>
 
-    <!-- 2手順組み合わせ セクション -->
-    <h2>2手順組み合わせ</h2>
-    <div id="content_2combo" class="container">
-        <div id="pairsContainer_2combo" class="pair-list"></div>
-    </div>
+        <!-- 2手順組み合わせ セクション -->
+        <h2>2手順組み合わせ</h2>
+        <div id="content_2combo" class="container">
+            <div id="pairsContainer_2combo" class="pair-list"></div>
+        </div>
 
-    <!-- 逆手順でない2手順組み合わせ セクション -->
-    <h2>2手順組み合わせ(逆手順ではない)</h2>
-    <div id="content_2combonorev" class="container">
-        <div id="pairsContainer_2combonorev" class="pair-list"></div>
-    </div>
+        <!-- 逆手順でない2手順組み合わせ セクション -->
+        <h2>2手順組み合わせ(逆手順ではない)</h2>
+        <div id="content_2combonorev" class="container">
+            <div id="pairsContainer_2combonorev" class="pair-list"></div>
+        </div>
 
-    <!-- 単独手順 セクション -->
-    <h2>単独手順</h2>
-    <div id="content_single" class="container">
-        <div id="pairsContainer_single" class="pair-list"></div>
-    </div>
-    <!-- 単独手順2回 セクション -->
-    <h2>単独手順2回</h2>
-    <div id="content_single2times" class="container">
-        <div id="pairsContainer_single2times" class="pair-list"></div>
-    </div>
-    <!-- 単独手順3回 セクション -->
-    <h2>単独手順3回</h2>
-    <div id="content_single3times" class="container">
-        <div id="pairsContainer_single3times" class="pair-list"></div>
-    </div>
-    <!-- 単独手順5回 セクション -->
-    <h2>単独手順5回</h2>
-    <div id="content_single5times" class="container">
-        <div id="pairsContainer_single5times" class="pair-list"></div>
-    </div>
+        <!-- 単独手順 セクション -->
+        <h2>単独手順</h2>
+        <div id="content_single" class="container">
+            <div id="pairsContainer_single" class="pair-list"></div>
+        </div>
+        <!-- 単独手順2回 セクション -->
+        <h2>単独手順2回</h2>
+        <div id="content_single2times" class="container">
+            <div id="pairsContainer_single2times" class="pair-list"></div>
+        </div>
+        <!-- 単独手順3回 セクション -->
+        <h2>単独手順3回</h2>
+        <div id="content_single3times" class="container">
+            <div id="pairsContainer_single3times" class="pair-list"></div>
+        </div>
+        <!-- 単独手順5回 セクション -->
+        <h2>単独手順5回</h2>
+        <div id="content_single5times" class="container">
+            <div id="pairsContainer_single5times" class="pair-list"></div>
+        </div>
 
-    <!-- 単独2手順組み合わせ セクション -->
-    <h2>単独2手順組み合わせ</h2>
-    <div id="content_single2combo" class="container">
-        <div id="pairsContainer_single2combo" class="pair-list"></div>
-    </div>
+        <!-- 単独2手順組み合わせ セクション -->
+        <h2>単独2手順組み合わせ</h2>
+        <div id="content_single2combo" class="container">
+            <div id="pairsContainer_single2combo" class="pair-list"></div>
+        </div>
 
-    <!-- 単独手順2回2手順組み合わせ セクション -->
-    <h2>単独手順2回2手順組み合わせ</h2>
-    <div id="content_single2combo2times" class="container">
-        <div id="pairsContainer_single2combo2times" class="pair-list"></div>
-    </div>
+        <!-- 単独手順2回2手順組み合わせ セクション -->
+        <h2>単独手順2回2手順組み合わせ</h2>
+        <div id="content_single2combo2times" class="container">
+            <div id="pairsContainer_single2combo2times" class="pair-list"></div>
+        </div>
 
-    <script>
-        /* ---------- ペア定義（ここで arrowType を指定する） ---------- */
-        //逆手順は矢印なし
-        const pairs_mutual = [
-        { left: "33", right: "37",midArrowType: "⇔" , arrowType: "none" },
-        { left: "27", right: "26-1",midArrowType: "⇔" , arrowType: "none" },
-        { left: "25-1", right: "24-1",midArrowType: "⇔" , arrowType: "none" },
-        { left: "25-2", right: "24-2",midArrowType: "⇔" , arrowType: "none" },
-        { left: "50", right: "49",midArrowType: "⇔" , arrowType: "none" },
-        { left: "31", right: "40",midArrowType: "⇔" , arrowType: "none" },
-        { left: "21-1", right: "21-2",midArrowType: "⇔" , arrowType: "none" }
-        ];
-        //6手Tループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
-        const pairs_Tloop = [
-        { left: "45-1", right: "44-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
-        // 例: 単純な下向き矢印
-        { left: "48-1", right: "51-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
-        // 例: 矢印なし
-        { left: "21-1", right: "", arrowType: "none" }
-        ];
-        //Fw式6手T(指差し(右手上))ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
-        const pairs_FwTloop = [
-        { left: "44-1", right: "45-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
-        { left: "51-1", right: "48-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
-        { left: "21-1", right: "", arrowType: "none" }
-        ];
-        //コループ
-        const pairs_KOloop = [
-        { left: "46", right: "43-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' または UR'U'R を1回" },
-        { left: "47", right: "52-1",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' または UR'U'R を1回" },
-        { left: "21-1", right: "" , arrowType: "none" }
-        ];
-        //Rw手順ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
-        const pairs_Rwloop = [
-        { left: "07", right: "06",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' またはR'U'RU を1回" },
-        { left: "54-1", right: "54-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' またはR'U'RU を1回" },
-        { left: "25-3", right: "", arrowType: "none" }
-        ];
-        //R'w手順ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
-        const pairs_RRwloop = [
-        { left: "08", right: "05",midArrowType: "⇔" , arrowType: "down_mid", mid: "RU'R'U またはRUR'U' を1回" },
-        { left: "53-1", right: "53-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RU'R'U またはRUR'U' を1回" },
-        { left: "25-4", right: "", arrowType: "none",midArrowType: "" }
-        ];
-        //2手順組み合わせ
-        const pairs_2combo = [
-        { left: "13", right: "09-1",midArrowType: "⇔" , arrowType: "none" },
-        { left: "04", right: "03",midArrowType: "← U2 →" , arrowType: "none" },
-        ];
-        //逆手順でない2手順
-        const pairs_2combonorev = [
-        { left: "17", right: "19-1",midArrowType: "← U2 →" , arrowType: "none" }
-        ];
-        //単独手順
-        const pairs_single = [
-        { left: "22", right: "", arrowType: "none", midArrowType: "" },
-        { left: "20", right: "", arrowType: "none", midArrowType: "" },
-        { left: "52-2", right: "", arrowType: "none", midArrowType: "" },
-        ];
-        //単独手順2回
-        const pairs_single2times = [
-        { left: "14", right: "", arrowType: "none", midArrowType: "" },
-        { left: "23-1", right: "", arrowType: "none", midArrowType: "" },
-        { left: "56", right: "", arrowType: "none", midArrowType: "" },
-        ];
-        //単独手順3回
-        const pairs_single3times = [
-        { left: "30", right: "", arrowType: "none", midArrowType: "" },
-        ];
-        //単独手順5回
-        const pairs_single5times = [
-        { left: "35", right: "", arrowType: "none", midArrowType: "" },
-        { left: "38", right: "", arrowType: "none", midArrowType: "" },
-        { left: "36", right: "", arrowType: "none", midArrowType: "" },
-        { left: "15", right: "", arrowType: "none", midArrowType: "" },
-        { left: "16-1", right: "", arrowType: "none", midArrowType: "" },
-        ];
-        //単独2手順組み合わせ
-        const pairs_single2combo = [
-        { left: "39-2", right: "", arrowType: "none", midArrowType: "" },
-        { left: "18-1", right: "", arrowType: "none", midArrowType: "" },
-        ];
-        //単独手順2回2手順組み合わせ
-        const pairs_single2combo2times = [
-        { left: "34-2", right: "", arrowType: "none", midArrowType: "" }
-        ];
+        <script>
+            /* ---------- ペア定義（ここで arrowType を指定する） ---------- */
+            //逆手順は矢印なし
+            const pairs_mutual = [
+            { left: "33", right: "37",midArrowType: "⇔" , arrowType: "none" },
+            { left: "27", right: "26-1",midArrowType: "⇔" , arrowType: "none" },
+            { left: "25-1", right: "24-1",midArrowType: "⇔" , arrowType: "none" },
+            { left: "25-2", right: "24-2",midArrowType: "⇔" , arrowType: "none" },
+            { left: "50", right: "49",midArrowType: "⇔" , arrowType: "none" },
+            { left: "31", right: "40",midArrowType: "⇔" , arrowType: "none" },
+            { left: "21-1", right: "21-2",midArrowType: "⇔" , arrowType: "none" }
+            ];
+            //6手Tループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
+            const pairs_Tloop = [
+            { left: "45-1", right: "44-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+            // 例: 単純な下向き矢印
+            { left: "48-1", right: "51-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+            // 例: 矢印なし
+            { left: "21-1", right: "", arrowType: "none" }
+            ];
+            //Fw式6手T(指差し(右手上))ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
+            const pairs_FwTloop = [
+            { left: "44-1", right: "45-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+            { left: "51-1", right: "48-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+            { left: "21-1", right: "", arrowType: "none" }
+            ];
+            //コループ
+            const pairs_KOloop = [
+            { left: "46", right: "43-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' または UR'U'R を1回" },
+            { left: "47", right: "52-1",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' または UR'U'R を1回" },
+            { left: "21-1", right: "" , arrowType: "none" }
+            ];
+            //Rw手順ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
+            const pairs_Rwloop = [
+            { left: "07", right: "06",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' またはR'U'RU を1回" },
+            { left: "54-1", right: "54-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' またはR'U'RU を1回" },
+            { left: "25-3", right: "", arrowType: "none" }
+            ];
+            //R'w手順ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
+            const pairs_RRwloop = [
+            { left: "08", right: "05",midArrowType: "⇔" , arrowType: "down_mid", mid: "RU'R'U またはRUR'U' を1回" },
+            { left: "53-1", right: "53-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RU'R'U またはRUR'U' を1回" },
+            { left: "25-4", right: "", arrowType: "none",midArrowType: "" }
+            ];
+            //2手順組み合わせ
+            const pairs_2combo = [
+            { left: "13", right: "09-1",midArrowType: "⇔" , arrowType: "none" },
+            { left: "04", right: "03",midArrowType: "← U2 →" , arrowType: "none" },
+            ];
+            //逆手順でない2手順
+            const pairs_2combonorev = [
+            { left: "17", right: "19-1",midArrowType: "← U2 →" , arrowType: "none" }
+            ];
+            //単独手順
+            const pairs_single = [
+            { left: "22", right: "", arrowType: "none", midArrowType: "" },
+            { left: "20", right: "", arrowType: "none", midArrowType: "" },
+            { left: "52-2", right: "", arrowType: "none", midArrowType: "" },
+            ];
+            //単独手順2回
+            const pairs_single2times = [
+            { left: "14", right: "", arrowType: "none", midArrowType: "" },
+            { left: "23-1", right: "", arrowType: "none", midArrowType: "" },
+            { left: "56", right: "", arrowType: "none", midArrowType: "" },
+            ];
+            //単独手順3回
+            const pairs_single3times = [
+            { left: "30", right: "", arrowType: "none", midArrowType: "" },
+            ];
+            //単独手順5回
+            const pairs_single5times = [
+            { left: "35", right: "", arrowType: "none", midArrowType: "" },
+            { left: "38", right: "", arrowType: "none", midArrowType: "" },
+            { left: "36", right: "", arrowType: "none", midArrowType: "" },
+            { left: "15", right: "", arrowType: "none", midArrowType: "" },
+            { left: "16-1", right: "", arrowType: "none", midArrowType: "" },
+            ];
+            //単独2手順組み合わせ
+            const pairs_single2combo = [
+            { left: "39-2", right: "", arrowType: "none", midArrowType: "" },
+            { left: "18-1", right: "", arrowType: "none", midArrowType: "" },
+            ];
+            //単独手順2回2手順組み合わせ
+            const pairs_single2combo2times = [
+            { left: "34-2", right: "", arrowType: "none", midArrowType: "" }
+            ];
 
-        /* ------------------------------------------------------------ */
-        document.addEventListener("DOMContentLoaded", () => {
-            // h2 をクリックしたら次のコンテナを折りたたみ／展開
-            document.querySelectorAll("h2").forEach(h2 => {
-            const container = h2.nextElementSibling; // h2 の直後の .container
-                if (!container) return;
-                    // 初期は折りたたまれた状態
-                    container.classList.remove("expanded");
-                        h2.addEventListener("click", () => {
-                            container.classList.toggle("expanded");
-                        });
-            });
-            fetch('cube_solve.json')
-            .then(r => r.json())
-            .then(data => {
-                const byNo = no => data.find(it => it["ナンバー"] === no);
-
-        //        const createPlaceholderCard = (label) => {
-        //          const ph = document.createElement('div');
-        //          ph.className = 'card';
-        //          ph.innerHTML = `<p>${label}</p><p>対象無し</p>`;
-        //          return ph;
-        //        };
-
-                const createCard = (info) => {
-        //          if (!info) return createPlaceholderCard('—');
-                if (!info) return null; // 情報がない場合は null を返してカードを表示しない
-                const c = document.createElement('div');
-                c.className = 'card';
-                c.innerHTML = `
-                    <p>${info["タイプ"]} No.${info["ナンバー"]}</p>
-                    <p>${info["愛称"]}</p>
-                    <img src="images/OLL/${info["画像"]}" alt="No.${info["ナンバー"]}">
-                    <div class="latex">$$${info["手順"]}$$</div>
-                    <p>${info["手順略称"] || ''}</p>
-                `;
-                return c;
-                };
-
-                // 矢印テキストを決定して返す（空文字なら表示しない）
-                function buildArrowText(pair) {
-                const t = pair.arrowType || "none";
-                switch (t) {
-                    case "none":
-                    return "";
-                    case "down":
-                    return "↓";
-                    case "down_mid":
-                    // pair.mid があればそれを使い、なければデフォルト文言
-                    return "↓  + 中間(" + (pair.mid || "RUR'U' または URU'R'") + ")";
-                    case "symbols":
-                    // pair.symbols に配列を渡すとそれを結合して表示
-                    if (Array.isArray(pair.symbols) && pair.symbols.length) {
-                        return pair.symbols.join(" ");
-                    }
-                    return "↓";
-                    case "custom":
-                    // pair.arrowText に任意文を入れる
-                    return pair.arrowText || "";
-                    default:
-                    // 文字列で直接渡された場合はその文字列を返す
-                    return String(pair.arrowType || "");
-                }
-                }
-
-                function renderPairs(containerId, pairsArray) {
-                const container = document.getElementById(containerId);
-                if (!container) {
-                    console.warn('container not found:', containerId);
-                    return;
-                }
-                container.innerHTML = '';
-
-                pairsArray.forEach((pair) => {
-                    const leftInfo = byNo(pair.left);
-                    const rightInfo = byNo(pair.right);
-                    const leftCard = createCard(leftInfo);
-                    const rightCard = createCard(rightInfo);
-                
-                    // 両方ともカードが存在しない場合はスキップ
-                    if (!leftInfo && !rightInfo) return;
-
-                    const pairDiv = document.createElement('div');
-                    pairDiv.className = 'pair';
-
-        //            pairDiv.appendChild(leftInfo ? createCard(leftInfo) : createPlaceholderCard('左: ' + pair.left));
-                    if (leftCard) pairDiv.appendChild(leftCard); //左カードが存在する場合は表示
-
-                    //中央矢印
-                    const mid = document.createElement('div');
-                    mid.className = 'arrow';
-                    mid.textContent = pair.midArrowType || '';
-                    pairDiv.appendChild(mid);
-
-        //            pairDiv.appendChild(rightInfo ? createCard(rightInfo) : createPlaceholderCard('右: ' + pair.right));
-                    if (rightCard) pairDiv.appendChild(rightCard);
-
-                    container.appendChild(pairDiv);
-
-                    // 縦矢印（パターンに応じて一行テキストを入れる）
-                    const vText = buildArrowText(pair);
-                    if (vText) {
-                    const v = document.createElement('div');
-                    v.className = 'v-arrow';
-                    v.textContent = vText;
-                    container.appendChild(v);
-                    }
+            /* ------------------------------------------------------------ */
+            document.addEventListener("DOMContentLoaded", () => {
+                // h2 をクリックしたら次のコンテナを折りたたみ／展開
+                document.querySelectorAll("h2").forEach(h2 => {
+                const container = h2.nextElementSibling; // h2 の直後の .container
+                    if (!container) return;
+                        // 初期は折りたたまれた状態
+                        container.classList.remove("expanded");
+                            h2.addEventListener("click", () => {
+                                container.classList.toggle("expanded");
+                            });
                 });
+                fetch('cube_solve.json')
+                .then(r => r.json())
+                .then(data => {
+                    const byNo = no => data.find(it => it["ナンバー"] === no);
 
-                if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();
-                }
+            //        const createPlaceholderCard = (label) => {
+            //          const ph = document.createElement('div');
+            //          ph.className = 'card';
+            //          ph.innerHTML = `<p>${label}</p><p>対象無し</p>`;
+            //          return ph;
+            //        };
 
-                // 描画実行
-                renderPairs("pairsContainer_mutual", pairs_mutual);
-                renderPairs("pairsContainer_Tloop", pairs_Tloop);
-                renderPairs("pairsContainer_FwTloop", pairs_FwTloop);
-                renderPairs("pairsContainer_KOloop", pairs_KOloop);
-                renderPairs("pairsContainer_Rwloop", pairs_Rwloop);
-                renderPairs("pairsContainer_RRwloop", pairs_RRwloop);
-                renderPairs("pairsContainer_2combo", pairs_2combo);
-                renderPairs("pairsContainer_2combonorev", pairs_2combonorev);
-                renderPairs("pairsContainer_single", pairs_single);
-                renderPairs("pairsContainer_single2times", pairs_single2times);
-                renderPairs("pairsContainer_single3times", pairs_single3times);
-                renderPairs("pairsContainer_single5times", pairs_single5times);
-                renderPairs("pairsContainer_single2combo", pairs_single2combo);
-                renderPairs("pairsContainer_single2combo2times", pairs_single2combo2times);
-            })
-            .catch(e => console.error('JSON読み込みエラー:', e));
-        });
-    </script>
+                    const createCard = (info) => {
+            //          if (!info) return createPlaceholderCard('—');
+                    if (!info) return null; // 情報がない場合は null を返してカードを表示しない
+                    const c = document.createElement('div');
+                    c.className = 'card';
+                    c.innerHTML = `
+                        <p>${info["タイプ"]} No.${info["ナンバー"]}</p>
+                        <p>${info["愛称"]}</p>
+                        <img src="images/OLL/${info["画像"]}" alt="No.${info["ナンバー"]}">
+                        <div class="latex">$$${info["手順"]}$$</div>
+                        <p>${info["手順略称"] || ''}</p>
+                    `;
+                    return c;
+                    };
+
+                    // 矢印テキストを決定して返す（空文字なら表示しない）
+                    function buildArrowText(pair) {
+                    const t = pair.arrowType || "none";
+                    switch (t) {
+                        case "none":
+                        return "";
+                        case "down":
+                        return "↓";
+                        case "down_mid":
+                        // pair.mid があればそれを使い、なければデフォルト文言
+                        return "↓  + 中間(" + (pair.mid || "RUR'U' または URU'R'") + ")";
+                        case "symbols":
+                        // pair.symbols に配列を渡すとそれを結合して表示
+                        if (Array.isArray(pair.symbols) && pair.symbols.length) {
+                            return pair.symbols.join(" ");
+                        }
+                        return "↓";
+                        case "custom":
+                        // pair.arrowText に任意文を入れる
+                        return pair.arrowText || "";
+                        default:
+                        // 文字列で直接渡された場合はその文字列を返す
+                        return String(pair.arrowType || "");
+                    }
+                    }
+
+                    function renderPairs(containerId, pairsArray) {
+                    const container = document.getElementById(containerId);
+                    if (!container) {
+                        console.warn('container not found:', containerId);
+                        return;
+                    }
+                    container.innerHTML = '';
+
+                    pairsArray.forEach((pair) => {
+                        const leftInfo = byNo(pair.left);
+                        const rightInfo = byNo(pair.right);
+                        const leftCard = createCard(leftInfo);
+                        const rightCard = createCard(rightInfo);
+                    
+                        // 両方ともカードが存在しない場合はスキップ
+                        if (!leftInfo && !rightInfo) return;
+
+                        const pairDiv = document.createElement('div');
+                        pairDiv.className = 'pair';
+
+            //            pairDiv.appendChild(leftInfo ? createCard(leftInfo) : createPlaceholderCard('左: ' + pair.left));
+                        if (leftCard) pairDiv.appendChild(leftCard); //左カードが存在する場合は表示
+
+                        //中央矢印
+                        const mid = document.createElement('div');
+                        mid.className = 'arrow';
+                        mid.textContent = pair.midArrowType || '';
+                        pairDiv.appendChild(mid);
+
+            //            pairDiv.appendChild(rightInfo ? createCard(rightInfo) : createPlaceholderCard('右: ' + pair.right));
+                        if (rightCard) pairDiv.appendChild(rightCard);
+
+                        container.appendChild(pairDiv);
+
+                        // 縦矢印（パターンに応じて一行テキストを入れる）
+                        const vText = buildArrowText(pair);
+                        if (vText) {
+                        const v = document.createElement('div');
+                        v.className = 'v-arrow';
+                        v.textContent = vText;
+                        container.appendChild(v);
+                        }
+                    });
+
+                    if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();
+                    }
+
+                    // 描画実行
+                    renderPairs("pairsContainer_mutual", pairs_mutual);
+                    renderPairs("pairsContainer_Tloop", pairs_Tloop);
+                    renderPairs("pairsContainer_FwTloop", pairs_FwTloop);
+                    renderPairs("pairsContainer_KOloop", pairs_KOloop);
+                    renderPairs("pairsContainer_Rwloop", pairs_Rwloop);
+                    renderPairs("pairsContainer_RRwloop", pairs_RRwloop);
+                    renderPairs("pairsContainer_2combo", pairs_2combo);
+                    renderPairs("pairsContainer_2combonorev", pairs_2combonorev);
+                    renderPairs("pairsContainer_single", pairs_single);
+                    renderPairs("pairsContainer_single2times", pairs_single2times);
+                    renderPairs("pairsContainer_single3times", pairs_single3times);
+                    renderPairs("pairsContainer_single5times", pairs_single5times);
+                    renderPairs("pairsContainer_single2combo", pairs_single2combo);
+                    renderPairs("pairsContainer_single2combo2times", pairs_single2combo2times);
+                })
+                .catch(e => console.error('JSON読み込みエラー:', e));
+            });
+        </script>
+    </div>
 </body>
 </html>
-
-
-
-
-
-
