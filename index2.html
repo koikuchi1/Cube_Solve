@@ -10,6 +10,12 @@
             transform-origin: top center;  /* 上中央を基準に縮小 */
             width: 100%;  /* もとの幅を維持 */
         }
+        /* スマホ用（画面幅600px以下など） */
+        @media screen and (max-width: 600px) {
+            #main-container {
+                transform: scale(1);      /* 100% */
+            }
+        }
         body { font-family: Arial, sans-serif; margin: 20px; }
         h1 { text-align: center; }
         h2 {
@@ -374,3 +380,4 @@
     </div>
 </body>
 </html>
+
