@@ -14,11 +14,16 @@
         /* スマホ用（画面幅600px以下など） */
         @media screen and (max-width: 600px) {
             #main-container {
-                transform: scale(1); 
+                transform: scale(1);  /* 元のサイズに戻す */
                 width: 100%;
+                overflow-x: auto;      /* 必要なら横スクロール */
+            }
+            .pair {
+                gap: 8px;  /* カード間の隙間を少し狭める */
             }
             .card {
-                width: 45%;    /* ペアでも横並びを維持、カード幅は画面幅に収まるよう調整 */
+                width: calc(50% - 4px); /* 2枚横並びでもはみ出さない */
+                min-width: 120px;        /* 小さすぎないように */
             }
         }
         body { font-family: Arial, sans-serif; margin: 20px; }
@@ -385,6 +390,7 @@
     </div>
 </body>
 </html>
+
 
 
 
