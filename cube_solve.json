@@ -571,7 +571,7 @@
     "タイプ": "OLL",
     "ナンバー": "54",
     "愛称": "L(3-2L)",
-    "手順": "\\begin{array}{l}\nRwU-R'URU'-R'UR-R2R'w\n\\end{array} \n",
+    "手順": "\\begin{array}{l}\nRwU-R'URU'-R'UR-U2R'w\n\\end{array} \n",
     "手順略称": "くずし同手順-U",
     "画像": "54.jpg"
   },
@@ -809,6 +809,7 @@
   }
 
 ]
+
 
 
 
