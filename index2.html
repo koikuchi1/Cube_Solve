@@ -302,7 +302,7 @@
             pairDiv.className = 'pair';
 
 //            pairDiv.appendChild(leftInfo ? createCard(leftInfo) : createPlaceholderCard('左: ' + pair.left));
-            if (leftInfo) pairDiv.appendChild(createCard(leftInfo)); //左カードが存在する場合は表示
+            if (leftCard) pairDiv.appendChild(leftCard); //左カードが存在する場合は表示
 
             //中央矢印
             const mid = document.createElement('div');
@@ -311,7 +311,7 @@
             pairDiv.appendChild(mid);
 
 //            pairDiv.appendChild(rightInfo ? createCard(rightInfo) : createPlaceholderCard('右: ' + pair.right));
-            if (rightinfo) pairDiv.appendChild(createCard(rightInfo));
+            if (rightCard) pairDiv.appendChild(rightCard);
 
             container.appendChild(pairDiv);
 
@@ -347,5 +347,3 @@
   </script>
 </body>
 </html>
-
-
