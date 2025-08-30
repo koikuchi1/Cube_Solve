@@ -483,7 +483,7 @@
     "タイプ": "OLL",
     "ナンバー": "46",
     "愛称": "コ",
-    "手順": "\\begin{array}{l}\nR'U'R'-FRF'-UR\\\\R'U'L'w-URU'B-R \\hspace{1em}(実際の指使い)  \\\\\\end{array} \n",
+    "手順": "\\begin{array}{l}\nR'U'R'-FRF'-UR\\\\L'wB'R'-URU'B-R \\hspace{1em}(実際の指使い)  \\\\\\end{array} \n",
     "手順略称": "くずし同手順5回、または43-2左手下指差し",
     "画像": "46.jpg"
   },
@@ -809,6 +809,7 @@
   }
 
 ]
+
 
 
 
