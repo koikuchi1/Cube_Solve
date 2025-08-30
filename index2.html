@@ -25,6 +25,9 @@
             max-height: 0;  /* 初期折りたたみ */
             padding: 0;
             margin: 0;
+            /* ここで全体を67％に縮小 */
+            transform: scale(0.67);
+            transform-origin: top center; /* 上から縮小 */    
         }
         .container.expanded { max-height: 5000px; padding: initial; margin: initial; } /* 展開時 */
 
@@ -367,6 +370,7 @@
     </script>
 </body>
 </html>
+
 
 
 
