@@ -2,27 +2,26 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>OLL関連性</title>
+  <title>OLL関連性（矢印パターン選択対応）</title>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; }
     h1 { text-align: center; }
-    h2 { text-align: center; }
+    h2 { text-align: center; margin-top: 30px; }
 
-    /* 全体：ペア同士は縦並び（上から下へ） */
-    #content {
+    /* 全体：ペア同士は縦並び */
+    #content, #content_tloop {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 30px;         /* ペアグループ間の間隔 */
-      margin-top: 20px;
+      gap: 20px;
+      margin-top: 10px;
     }
 
-    /* ペアリスト（各セクションで使うコンテナ） */
     .pair-list {
       display: flex;
-      flex-direction: column; /* ペア同士は縦並び */
-      gap: 24px;
+      flex-direction: column;
+      gap: 18px;
       align-items: center;
       width: 100%;
     }
@@ -31,7 +30,7 @@
     .pair {
       display: flex;
       align-items: center;
-      gap: 20px;         /* 左カード - ⇔ - 右カード の間隔 */
+      gap: 18px;
     }
 
     .card {
@@ -46,12 +45,12 @@
 
     .arrow { font-size: 2em; font-weight: bold; }
 
-    /* ペア間に入る縦矢印（条件付きで差し込む） */
     .v-arrow {
       text-align: center;
-      font-size: 1.6em;
-      line-height: 1;
+      font-size: 1.1em;
+      line-height: 1.3;
       color: #333;
+      white-space: pre-wrap; /* 表示中の改行を許可 */
     }
 
     .latex { font-family: 'Courier New', monospace; margin-top: 10px; white-space: pre-wrap; }
@@ -62,8 +61,8 @@
 
   <!-- 逆手順 セクション -->
   <h2>逆手順</h2>
-  <div id="content_compt" class="container">
-    <div id="pairsContainer_compT" class="pair-list"></div>
+  <div id="content_mutual" class="container">
+    <div id="pairsContainer_mutual" class="pair-list"></div>
   </div>
 
   <!-- 6手Tループ セクション -->
@@ -78,34 +77,47 @@
     <div id="pairsContainer_FwTloop" class="pair-list"></div>
   </div>
 
+  <!-- コ：ループ セクション -->
+  <h2>コ：5種ループ</h2>
+  <div id="content_koloop" class="container">
+    <div id="pairsContainer_KOloop" class="pair-list"></div>
+  </div>
+
   <script>
-    // 既存の逆手順ペア（矢印なし）
-    const pairs_compT = [
-      { left: "33", right: "37", arrow: false },
-      { left: "27", right: "26-1", arrow: false }
+    /* ---------- ペア定義（ここで arrowType を指定する） ---------- */
+    //逆手順は矢印なし
+    const pairs_mutual = [
+      { left: "33", right: "37", arrowType: "none" },
+      { left: "27", right: "26-1", arrowType: "none" }
     ];
 
-    // 6手Tループで追加するペア（指定どおり、1つ目と2つ目の下に ↓ を入れる）
+    //6手Tループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
     const pairs_Tloop = [
-      { left: "45-1", right: "44-2", arrow: true },   // その下に ↓
-      { left: "48-1", right: "51-2", arrow: true },   // その下に ↓
-      { left: "21-1", right: "21-2", arrow: false }   // 最後は矢印なし
+      { left: "45-1", right: "44-2", arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+      // 例: 単純な下向き矢印
+      { left: "48-1", right: "51-2", arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+      // 例: 矢印なし
+      { left: "21-1", right: "21-2", arrowType: "none" }
     ];
-
-    // 6手Tループで追加するペア（指定どおり、1つ目と2つ目の下に ↓ を入れる）
+    //Fw式6手T(指差し(右手上))ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
     const pairs_FwTloop = [
-      { left: "44-1", right: "45-2", arrow: true },   // その下に ↓
-      { left: "51-1", right: "48-2", arrow: true },   // その下に ↓
-      { left: "21-1", right: "21-2", arrow: false }   // 最後は矢印なし
+      { left: "44-1", right: "45-2", arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+      { left: "51-1", right: "48-2", arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+      { left: "21-1", right: "21-2", arrowType: "none" }
     ];
+    //Fw式6手T(指差し(右手上))ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
+    const pairs_KOloop = [
+      { left: "46", right: "43-2", arrowType: "down_mid", mid: "RUR'U' または URU'B を1回" },
+      { left: "47", right: "52-1", arrowType: "down_mid", mid: "RUR'U' または URU'B を1回" },
+      { left: "21-1", right: "21-2", arrowType: "none" }
+    ];
+    /* ------------------------------------------------------------ */
 
     fetch('cube_solve.json')
       .then(r => r.json())
       .then(data => {
-        // 番号で検索する便利関数
         const byNo = no => data.find(it => it["ナンバー"] === no);
 
-        // 情報が見つからないときのプレースホルダカード
         const createPlaceholderCard = (label) => {
           const ph = document.createElement('div');
           ph.className = 'card';
@@ -113,13 +125,10 @@
           return ph;
         };
 
-        // 実際のカードを作る関数（MathJax 用に LaTeX を $$...$$ で囲む）
         const createCard = (info) => {
           if (!info) return createPlaceholderCard('—');
-
           const c = document.createElement('div');
           c.className = 'card';
-          // info["手順"] は JSON 側で LaTeX（バックスラッシュ含む）になっている想定
           c.innerHTML = `
             <p>${info["タイプ"]} No.${info["ナンバー"]}</p>
             <p>${info["愛称"]}</p>
@@ -130,61 +139,77 @@
           return c;
         };
 
-        // renderPairs 関数（任意のコンテナID に対して pairs 配列を描画）
+        // 矢印テキストを決定して返す（空文字なら表示しない）
+        function buildArrowText(pair) {
+          const t = pair.arrowType || "none";
+          switch (t) {
+            case "none":
+              return "";
+            case "down":
+              return "↓";
+            case "down_mid":
+              // pair.mid があればそれを使い、なければデフォルト文言
+              return "↓  + 中間(" + (pair.mid || "RUR'U' または URU'R'") + ")";
+            case "symbols":
+              // pair.symbols に配列を渡すとそれを結合して表示
+              if (Array.isArray(pair.symbols) && pair.symbols.length) {
+                return pair.symbols.join(" ");
+              }
+              return "↓";
+            case "custom":
+              // pair.arrowText に任意文を入れる
+              return pair.arrowText || "";
+            default:
+              // 文字列で直接渡された場合はその文字列を返す
+              return String(pair.arrowType || "");
+          }
+        }
+
         function renderPairs(containerId, pairsArray) {
           const container = document.getElementById(containerId);
           if (!container) {
             console.warn('container not found:', containerId);
             return;
           }
-          container.innerHTML = ''; // 既存内容をクリア
+          container.innerHTML = '';
 
-          pairsArray.forEach((pair, index) => {
+          pairsArray.forEach((pair) => {
             const leftInfo = byNo(pair.left);
             const rightInfo = byNo(pair.right);
 
-            // ペア行（横並び）
             const pairDiv = document.createElement('div');
             pairDiv.className = 'pair';
 
-            // 左カード
-            pairDiv.appendChild( leftInfo ? createCard(leftInfo) : createPlaceholderCard('左: ' + pair.left) );
+            pairDiv.appendChild(leftInfo ? createCard(leftInfo) : createPlaceholderCard('左: ' + pair.left));
 
-            // 横向きの ⇔ は常に表示
             const mid = document.createElement('div');
             mid.className = 'arrow';
             mid.textContent = '⇔';
             pairDiv.appendChild(mid);
 
-            // 右カード
-            pairDiv.appendChild( rightInfo ? createCard(rightInfo) : createPlaceholderCard('右: ' + pair.right) );
+            pairDiv.appendChild(rightInfo ? createCard(rightInfo) : createPlaceholderCard('右: ' + pair.right));
 
             container.appendChild(pairDiv);
 
-            // 縦矢印（pair.arrow が true のときのみ表示）
-            if (pair.arrow) {
+            // 縦矢印（パターンに応じて一行テキストを入れる）
+            const vText = buildArrowText(pair);
+            if (vText) {
               const v = document.createElement('div');
               v.className = 'v-arrow';
-              v.textContent ="↓ + 中間(RUR'U'またはURU'R')1回";
+              v.textContent = vText;
               container.appendChild(v);
             }
           });
 
-          // MathJax の再描画
-          if (window.MathJax && MathJax.typesetPromise) {
-            MathJax.typesetPromise();
-          }
+          if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();
         }
 
-        // 実行：それぞれのセクションに描画
-        renderPairs("pairsContainer_compT", pairs_compT);
+        // 描画実行
+        renderPairs("pairsContainer_mutual", pairs_mutual);
         renderPairs("pairsContainer_Tloop", pairs_Tloop);
-        renderPairs("pairsContainer_FwTloop", pairs_FwTloop);
+        renderPairs("pairsContainer_KOloop", pairs_KOloop);
       })
       .catch(e => console.error('JSON読み込みエラー:', e));
   </script>
-
 </body>
 </html>
-
-
