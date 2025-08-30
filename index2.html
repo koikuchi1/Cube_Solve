@@ -145,85 +145,85 @@
     //逆手順は矢印なし
     const pairs_mutual = [
       { left: "33", right: "37",midArrowType: "⇔" , arrowType: "none" },
-      { left: "27", right: "26-1",midArrowType: "⇔", arrowType: "none" },
-      { left: "25-1", right: "24-1",midArrowType: "⇔", arrowType: "none" },
-      { left: "25-2", right: "24-2",midArrowType: "⇔", arrowType: "none" },
-      { left: "50", right: "49",midArrowType: "⇔", arrowType: "none" },
-      { left: "31", right: "40",midArrowType: "⇔", arrowType: "none" },
+      { left: "27", right: "26-1",midArrowType: "⇔" , arrowType: "none" },
+      { left: "25-1", right: "24-1",midArrowType: "⇔" , arrowType: "none" },
+      { left: "25-2", right: "24-2",midArrowType: "⇔" , arrowType: "none" },
+      { left: "50", right: "49",midArrowType: "⇔" , arrowType: "none" },
+      { left: "31", right: "40",midArrowType: "⇔" , arrowType: "none" },
     ];
     //6手Tループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
     const pairs_Tloop = [
-      { left: "45-1", right: "44-2",midArrowType: "⇔", arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+      { left: "45-1", right: "44-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
       // 例: 単純な下向き矢印
-      { left: "48-1", right: "51-2",midArrowType: "⇔", arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+      { left: "48-1", right: "51-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
       // 例: 矢印なし
-      { left: "21-1", right: "21-2",midArrowType: "⇔", arrowType: "none" }
+      { left: "21-1", right: "21-2",midArrowType: "⇔" , arrowType: "none" }
     ];
     //Fw式6手T(指差し(右手上))ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
     const pairs_FwTloop = [
-      { left: "44-1", right: "45-2",midArrowType: "⇔", arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
-      { left: "51-1", right: "48-2",midArrowType: "⇔", arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
-      { left: "21-1", right: "21-2",midArrowType: "⇔", arrowType: "none" }
+      { left: "44-1", right: "45-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+      { left: "51-1", right: "48-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
+      { left: "21-1", right: "21-2",midArrowType: "⇔" , arrowType: "none" }
     ];
     //Fw式6手T(指差し(右手上))ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
     const pairs_KOloop = [
-      { left: "46", right: "43-2",midArrowType: "⇔", arrowType: "down_mid", mid: "R'URU' または UR'U'R を1回" },
-      { left: "47", right: "52-1",midArrowType: "⇔", arrowType: "down_mid", mid: "R'URU' または UR'U'R を1回" },
-      { left: "21-1", right: "21-2",midArrowType: "⇔", arrowType: "none" }
+      { left: "46", right: "43-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' または UR'U'R を1回" },
+      { left: "47", right: "52-1",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' または UR'U'R を1回" },
+      { left: "21-1", right: "21-2",midArrowType: "⇔" , arrowType: "none" }
     ];
     //Rw手順ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
     const pairs_Rwloop = [
-      { left: "07", right: "06", arrowType: "down_mid", mid: "R'URU' またはR'U'RU を1回" },
-      { left: "54-1", right: "54-2", arrowType: "down_mid", mid: "R'URU' またはR'U'RU を1回" },
+      { left: "07", right: "06",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' またはR'U'RU を1回" },
+      { left: "54-1", right: "54-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "R'URU' またはR'U'RU を1回" },
       { left: "25-3", right: "", arrowType: "none" }
     ];
     //R'w手順ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
     const pairs_RRwloop = [
-      { left: "08", right: "05",midArrowType: "⇔", arrowType: "down_mid", mid: "RU'R'U またはRUR'U' を1回" },
-      { left: "53-1", right: "53-2",midArrowType: "⇔", arrowType: "down_mid", mid: "RU'R'U またはRUR'U' を1回" },
-      { left: "25-4", right: "", arrowType: "none" }
+      { left: "08", right: "05",midArrowType: "⇔" , arrowType: "down_mid", mid: "RU'R'U またはRUR'U' を1回" },
+      { left: "53-1", right: "53-2",midArrowType: "⇔" , arrowType: "down_mid", mid: "RU'R'U またはRUR'U' を1回" },
+      { left: "25-4", right: "", arrowType: "none",midArrowType: "" }
     ];
     //2手順組み合わせ
     const pairs_2combo = [
-      { left: "13", right: "09-1",midArrowType: "⇔", arrowType: "none" },
-      { left: "04", right: "03",midArrowType: "⇔", arrowType: "none" },
+      { left: "13", right: "09-1",midArrowType: "⇔" , arrowType: "none" },
+      { left: "04", right: "03",midArrowType: "⇔" , arrowType: "none" },
     ];
     //逆手順でない2手順
     const pairs_2combonorev = [
-      { left: "17", right: "19-1",midArrowType: "⇔", arrowType: "none" }
+      { left: "17", right: "19-1",midArrowType: "⇔" , arrowType: "none" }
     ];
     //単独手順
     const pairs_single = [
-      { left: "22", right: "",midArrowType: "", arrowType: "none" },
-      { left: "20", right: "",midArrowType: "", arrowType: "none" },
-      { left: "52-2", right: "",midArrowType: "", arrowType: "none" },
+      { left: "22", right: "", arrowType: "none", midArrowType: "" },
+      { left: "20", right: "", arrowType: "none", midArrowType: "" },
+      { left: "52-2", right: "", arrowType: "none", midArrowType: "" },
     ];
     //単独手順2回
     const pairs_single2times = [
-      { left: "14", right: "", arrowType: "none" },
-      { left: "23-1", right: "", arrowType: "none" },
-      { left: "56", right: "", arrowType: "none" },
+      { left: "14", right: "", arrowType: "none", midArrowType: "" },
+      { left: "23-1", right: "", arrowType: "none", midArrowType: "" },
+      { left: "56", right: "", arrowType: "none", midArrowType: "" },
     ];
     //単独手順3回
     const pairs_single3times = [
-      { left: "30", right: "",midArrowType: "", arrowType: "none" },
+      { left: "30", right: "", arrowType: "none", midArrowType: "" },
     ];
     //単独手順5回
     const pairs_single5times = [
-      { left: "35", right: "", arrowType: "none" },
-      { left: "38", right: "", arrowType: "none" },
-      { left: "36", right: "", arrowType: "none" },
-      { left: "15", right: "", arrowType: "none" },
-      { left: "16-1", right: "", arrowType: "none" },
+      { left: "35", right: "", arrowType: "none", midArrowType: "" },
+      { left: "38", right: "", arrowType: "none", midArrowType: "" },
+      { left: "36", right: "", arrowType: "none", midArrowType: "" },
+      { left: "15", right: "", arrowType: "none", midArrowType: "" },
+      { left: "16-1", right: "", arrowType: "none", midArrowType: "" },
     ];
     //単独2手順組み合わせ
     const pairs_single2combo = [
-      { left: "39-2", right: "", arrowType: "none" },
-      { left: "18-1", right: "", arrowType: "none" },
+      { left: "39-2", right: "", arrowType: "none", midArrowType: "" },
+      { left: "18-1", right: "", arrowType: "none", midArrowType: "" },
     ];
     //単独手順2回2手順組み合わせ
     const pairs_single2combo2times = [
-      { left: "34-2", right: "", arrowType: "none" }
+      { left: "34-2", right: "", arrowType: "none", midArrowType: "" }
     ];
 
     /* ------------------------------------------------------------ */
@@ -233,15 +233,16 @@
       .then(data => {
         const byNo = no => data.find(it => it["ナンバー"] === no);
 
-        const createPlaceholderCard = (label) => {
-          const ph = document.createElement('div');
-          ph.className = 'card';
-          ph.innerHTML = `<p>${label}</p><p>対象無し</p>`;
-          return ph;
-        };
+//        const createPlaceholderCard = (label) => {
+//          const ph = document.createElement('div');
+//          ph.className = 'card';
+//          ph.innerHTML = `<p>${label}</p><p>対象無し</p>`;
+//          return ph;
+//        };
 
         const createCard = (info) => {
-          if (!info) return createPlaceholderCard('—');
+//          if (!info) return createPlaceholderCard('—');
+          if (!info) return null; // 情報がない場合は null を返してカードを表示しない
           const c = document.createElement('div');
           c.className = 'card';
           c.innerHTML = `
@@ -291,18 +292,24 @@
           pairsArray.forEach((pair) => {
             const leftInfo = byNo(pair.left);
             const rightInfo = byNo(pair.right);
+        
+            // 両方ともカードが存在しない場合はスキップ
+            if (!leftInfo && !rightInfo) return;
 
             const pairDiv = document.createElement('div');
             pairDiv.className = 'pair';
 
-            pairDiv.appendChild(leftInfo ? createCard(leftInfo) : createPlaceholderCard('左: ' + pair.left));
+//            pairDiv.appendChild(leftInfo ? createCard(leftInfo) : createPlaceholderCard('左: ' + pair.left));
+            if (leftInfo) pairDiv.appendChild(createCard(leftInfo)); //左カードが存在する場合は表示
 
+            //中央矢印
             const mid = document.createElement('div');
             mid.className = 'arrow';
             mid.textContent = pair.midArrowType || '';
             pairDiv.appendChild(mid);
 
-            pairDiv.appendChild(rightInfo ? createCard(rightInfo) : createPlaceholderCard('右: ' + pair.right));
+//            pairDiv.appendChild(rightInfo ? createCard(rightInfo) : createPlaceholderCard('右: ' + pair.right));
+            if (rightinfo) pairDiv.appendChild(createCard(rightInfo));
 
             container.appendChild(pairDiv);
 
@@ -338,5 +345,3 @@
   </script>
 </body>
 </html>
-
-
