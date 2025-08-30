@@ -156,6 +156,11 @@
         <div id="content_single5times" class="container">
             <div id="pairsContainer_single5times" class="pair-list"></div>
         </div>
+        <!-- 単独手順8回 セクション -->
+        <h2>単独手順8回</h2>
+        <div id="content_single8times" class="container">
+            <div id="pairsContainer_single8times" class="pair-list"></div>
+        </div>
 
         <!-- 単独2手順組み合わせ セクション -->
         <h2>単独2手順組み合わせ</h2>
@@ -245,6 +250,10 @@
             { left: "36", right: "", arrowType: "none", midArrowType: "" },
             { left: "15", right: "", arrowType: "none", midArrowType: "" },
             { left: "16-1", right: "", arrowType: "none", midArrowType: "" },
+            ];
+            //単独手順8回
+            const pairs_single8times = [
+            { left: "55-2", right: "", arrowType: "none", midArrowType: "" },
             ];
             //単独2手順組み合わせ
             const pairs_single2combo = [
@@ -381,6 +390,7 @@
                     renderPairs("pairsContainer_single2times", pairs_single2times);
                     renderPairs("pairsContainer_single3times", pairs_single3times);
                     renderPairs("pairsContainer_single5times", pairs_single5times);
+                    renderPairs("pairsContainer_single8times", pairs_single8times);
                     renderPairs("pairsContainer_single2combo", pairs_single2combo);
                     renderPairs("pairsContainer_single2combo2times", pairs_single2combo2times);
                 })
@@ -390,10 +400,3 @@
     </div>
 </body>
 </html>
-
-
-
-
-
-
-
