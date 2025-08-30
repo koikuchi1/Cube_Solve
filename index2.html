@@ -89,6 +89,12 @@
     <div id="pairsContainer_Rwloop" class="pair-list"></div>
   </div>
 
+  <!-- R'w：ループ セクション -->
+  <h2>R'w手順：5種ループ</h2>
+  <div id="content_RRwloop" class="container">
+    <div id="pairsContainer_RRwloop" class="pair-list"></div>
+  </div>
+
   <script>
     /* ---------- ペア定義（ここで arrowType を指定する） ---------- */
     //逆手順は矢印なし
@@ -120,8 +126,14 @@
     //Rw手順ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
     const pairs_Rwloop = [
       { left: "07", right: "06", arrowType: "down_mid", mid: "R'URU' またはRUR'U' を1回" },
-      { left: "54-1", right: "54-2", arrowType: "down_mid", mid: "R'URU'またはRUR'U' を1回" },
+      { left: "54-1", right: "54-2", arrowType: "down_mid", mid: "R'URU' またはRUR'U' を1回" },
       { left: "25-3", right: "", arrowType: "none" }
+    ];
+    //R'w手順ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
+    const pairs_RRwloop = [
+      { left: "08", right: "05", arrowType: "down_mid", mid: "R'U'RU またはRUR'U' を1回" },
+      { left: "53-1", right: "53-4", arrowType: "down_mid", mid: "R'U'RU またはRUR'U' を1回" },
+      { left: "25-4", right: "", arrowType: "none" }
     ];
     /* ------------------------------------------------------------ */
 
@@ -221,17 +233,9 @@
         renderPairs("pairsContainer_Tloop", pairs_Tloop);
         renderPairs("pairsContainer_KOloop", pairs_KOloop);
         renderPairs("pairsContainer_Rwloop", pairs_Rwloop);
+        renderPairs("pairsContainer_Rwloop", pairs_RRwloop);
       })
       .catch(e => console.error('JSON読み込みエラー:', e));
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
