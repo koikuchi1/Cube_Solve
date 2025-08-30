@@ -95,6 +95,45 @@
     <div id="pairsContainer_RRwloop" class="pair-list"></div>
   </div>
 
+  <!-- 2手順組み合わせ セクション -->
+  <h2>2手順組み合わせ</h2>
+  <div id="content_2combo" class="container">
+    <div id="pairsContainer_2combo" class="pair-list"></div>
+  </div>
+
+  <!-- 逆手順でない2手順組み合わせ セクション -->
+  <h2>2手順組み合わせ(逆手順ではない)</h2>
+  <div id="content_2combonorev" class="container">
+    <div id="pairsContainer_2combonorev" class="pair-list"></div>
+  </div>
+
+  <!-- 単独手順 セクション -->
+  <h2>単独手順</h2>
+  <div id="content_single" class="container">
+    <div id="pairsContainer_single" class="pair-list"></div>
+  </div>
+  <!-- 単独手順2回 セクション -->
+  <h2>単独手順2回</h2>
+  <div id="content_single2times" class="container">
+    <div id="pairsContainer_single2times" class="pair-list"></div>
+  </div>
+  <!-- 単独手順3回 セクション -->
+  <h2>単独手順3回</h2>
+  <div id="content_single3times" class="container">
+    <div id="pairsContainer_single3times" class="pair-list"></div>
+  </div>
+  <!-- 単独手順5回 セクション -->
+  <h2>単独手順5回</h2>
+  <div id="content_single5times" class="container">
+    <div id="pairsContainer_single5times" class="pair-list"></div>
+  </div>
+
+  <!-- 単独2手順組み合わせ セクション -->
+  <h2>単独2手順組み合わせ</h2>
+  <div id="content_single2combo" class="container">
+    <div id="pairsContainer_single2combo" class="pair-list"></div>
+  </div>
+
   <script>
     /* ---------- ペア定義（ここで arrowType を指定する） ---------- */
     //逆手順は矢印なし
@@ -102,9 +141,10 @@
       { left: "33", right: "37", arrowType: "none" },
       { left: "27", right: "26-1", arrowType: "none" },
       { left: "25-1", right: "24-1", arrowType: "none" },
-      { left: "25-2", right: "24-2", arrowType: "none" }
+      { left: "25-2", right: "24-2", arrowType: "none" },
+      { left: "50", right: "49", arrowType: "none" },
+      { left: "31", right: "40", arrowType: "none" },
     ];
-
     //6手Tループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
     const pairs_Tloop = [
       { left: "45-1", right: "44-2", arrowType: "down_mid", mid: "RUR'U' または URU'R' を1回" },
@@ -137,6 +177,48 @@
       { left: "53-1", right: "53-2", arrowType: "down_mid", mid: "RU'R'U またはRUR'U' を1回" },
       { left: "25-4", right: "", arrowType: "none" }
     ];
+    //2手順組み合わせ
+    const pairs_2combo = [
+      { left: "13", right: "09-1", arrowType: "none" },
+      { left: "04", right: "03", arrowType: "none" },
+    ];
+    //逆手順でない2手順
+    const pairs_2combonorev = [
+      { left: "17", right: "19-1", arrowType: "none" }
+    ];
+    //単独手順
+    const pairs_single = [
+      { left: "22", right: "", arrowType: "none" },
+      { left: "20", right: "", arrowType: "none" },
+      { left: "52-2", right: "", arrowType: "none" },
+    ];
+    //単独手順2回
+    const pairs_single2times = [
+      { left: "14", right: "", arrowType: "none" },
+      { left: "23-1", right: "", arrowType: "none" },
+      { left: "56", right: "", arrowType: "none" },
+    ];
+    //単独手順3回
+    const pairs_single3times = [
+      { left: "30", right: "", arrowType: "none" },
+    ];
+    //単独手順5回
+    const pairs_single5times = [
+      { left: "35", right: "", arrowType: "none" },
+      { left: "38", right: "", arrowType: "none" },
+      { left: "36", right: "", arrowType: "none" },
+      { left: "15", right: "", arrowType: "none" },
+      { left: "16-1", right: "", arrowType: "none" },
+    ];
+
+    //2手順組み合わせ
+    const pairs_single2combo = [
+      { left: "45-1", right: "", arrowType: "none" },
+      { left: "39-2", right: "", arrowType: "none" },
+      { left: "34-2", right: "", arrowType: "none" },
+      { left: "18-1", right: "", arrowType: "none" },
+    ];
+
     /* ------------------------------------------------------------ */
 
     fetch('cube_solve.json')
@@ -236,17 +318,14 @@
         renderPairs("pairsContainer_KOloop", pairs_KOloop);
         renderPairs("pairsContainer_Rwloop", pairs_Rwloop);
         renderPairs("pairsContainer_RRwloop", pairs_RRwloop);
+        renderPairs("pairsContainer_2combo", pairs_2combo);
+        renderPairs("pairsContainer_2combonorev", pairs_2combonorev);
+        renderPairs("pairsContainer_single", pairs_single);
+        renderPairs("pairsContainer_single2times", pairs_single2times);
+        renderPairs("pairsContainer_single3times", pairs_single3times);
+        renderPairs("pairsContainer_single5times", pairs_single5times);
       })
       .catch(e => console.error('JSON読み込みエラー:', e));
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
