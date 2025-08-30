@@ -83,6 +83,12 @@
     <div id="pairsContainer_KOloop" class="pair-list"></div>
   </div>
 
+  <!-- Rw：ループ セクション -->
+  <h2>Rw手順：5種ループ</h2>
+  <div id="content_Rwloop" class="container">
+    <div id="pairsContainer_Rwloop" class="pair-list"></div>
+  </div>
+
   <script>
     /* ---------- ペア定義（ここで arrowType を指定する） ---------- */
     //逆手順は矢印なし
@@ -110,6 +116,12 @@
       { left: "46", right: "43-2", arrowType: "down_mid", mid: "R'URU' または UR'U'R を1回" },
       { left: "47", right: "52-1", arrowType: "down_mid", mid: "R'URU' または UR'U'R を1回" },
       { left: "21-1", right: "21-2", arrowType: "none" }
+    ];
+    //Rw手順ループで追加するペアdown_mid（中間手順の文言を mid プロパティで指定）
+    const pairs_Rwloop = [
+      { left: "07", right: "06", arrowType: "down_mid", mid: "R'URU' または UR'U'R を1回" },
+      { left: "54", right: "52-1", arrowType: "down_mid", mid: "R'URU' または UR'U'R を1回" },
+      { left: "08", right: "05", arrowType: "none" }
     ];
     /* ------------------------------------------------------------ */
 
@@ -208,15 +220,9 @@
         renderPairs("pairsContainer_mutual", pairs_mutual);
         renderPairs("pairsContainer_Tloop", pairs_Tloop);
         renderPairs("pairsContainer_KOloop", pairs_KOloop);
+        renderPairs("pairsContainer_Rwloop", pairs_Rwloop);
       })
       .catch(e => console.error('JSON読み込みエラー:', e));
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
