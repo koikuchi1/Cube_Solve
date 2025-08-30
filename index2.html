@@ -134,6 +134,12 @@
     <div id="pairsContainer_single2combo" class="pair-list"></div>
   </div>
 
+  <!-- 単独手順2回2手順組み合わせ セクション -->
+  <h2>単独手順2回2手順組み合わせ</h2>
+  <div id="content_single2combo2times" class="container">
+    <div id="pairsContainer_single2combo2times" class="pair-list"></div>
+  </div>
+
   <script>
     /* ---------- ペア定義（ここで arrowType を指定する） ---------- */
     //逆手順は矢印なし
@@ -211,12 +217,14 @@
       { left: "16-1", right: "", arrowType: "none" },
     ];
 
-    //2手順組み合わせ
+    //単独2手順組み合わせ
     const pairs_single2combo = [
-      { left: "45-1", right: "", arrowType: "none" },
       { left: "39-2", right: "", arrowType: "none" },
-      { left: "34-2", right: "", arrowType: "none" },
       { left: "18-1", right: "", arrowType: "none" },
+    ];
+    //単独手順2回2手順組み合わせ
+    const pairs_single2combo2times = [
+      { left: "34-2", right: "", arrowType: "none" }
     ];
 
     /* ------------------------------------------------------------ */
@@ -325,9 +333,9 @@
         renderPairs("pairsContainer_single3times", pairs_single3times);
         renderPairs("pairsContainer_single5times", pairs_single5times);
         renderPairs("pairsContainer_single2combo", pairs_single2combo);
+        renderPairs("pairsContainer_single2combo2times", pairs_single2combo2times);
       })
       .catch(e => console.error('JSON読み込みエラー:', e));
   </script>
 </body>
 </html>
-
