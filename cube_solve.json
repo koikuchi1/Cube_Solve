@@ -723,7 +723,7 @@
     "タイプ": "PLL",
     "ナンバー": "n7",
     "愛称": "E-perm(4角平行)",
-    "手順": "\\begin{array}{l}\nRUR'U-R'U'RF'-RUR'U'-R'FR2U'-R'2UR-R' \\hspace{1em} &(持ち替えなし) \\\\n(x')-\\displaystyle \\frac{RU'R'D-RUR'D'}{ \\text{左左右右} }-  \\displaystyle \\frac{RUR'D-RU'R'D' }{ \\text{右左左右} } \n\\end{array} \n",
+    "手順": "\\begin{array}{l}\nRUR'U-R'U'RF'-RUR'U'-R'FR2U'-R'2UR-R' \\hspace{1em} &(持ち替えなし) \\\\n (x')-\\displaystyle \\frac{RU'R'D-RUR'D'}{ \\text{左左右右} }-  \\displaystyle \\frac{RUR'D-RU'R'D' }{ \\text{右左左右} } \n\\end{array} \n",
     "手順略称": "(x')=上手前、くずし同手順",
     "画像": "n7.jpg"
   },
